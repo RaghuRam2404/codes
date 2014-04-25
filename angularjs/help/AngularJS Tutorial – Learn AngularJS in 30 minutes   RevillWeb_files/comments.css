@@ -1,0 +1,166 @@
+.comments-area {
+    background-color: #E1E1E1;
+    padding: 10px 20px 20px 20px;
+}
+.comments-title {
+    font-size: 32px;
+}
+.comments-title .icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 32px;
+    margin: -3px 0 0 0;
+}
+.comment-list, .comment-list .children {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.comment-list .children {
+    margin: 0 0 0 20px;
+}
+.comment-list .comment {
+
+}
+.comment-list li .comment-author {
+    line-height: 30px;
+    height: 30px;
+    font-size: 22px;
+    position: relative;
+}
+.comment-list li .comment-author img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -120px;
+    top: 0;
+    border-radius: 100px;
+    border: solid 2px #E1E1E1;
+}
+.comment-list .comment-body {
+    position: relative;
+    padding: 20px 20px 20px 140px;
+    background-color: #FFF;
+    min-height: 100px;
+}
+.comment-list .pingback {
+    margin-top: 10px;
+}
+.comment-list .pingback a {
+    color: #333;
+    text-decoration: none;
+}
+.comment-list .pingback a:hover {
+    text-decoration: underline;
+}
+.comment-list .pingback .comment-body {
+    padding: 10px;
+    min-height: 0;
+    background-color: #dadada;
+}
+.comment-list .comment-body .says {
+    display: none;
+}
+.comment-list .commentmetadata {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+}
+.comment-list .commentmetadata a {
+    color: #333;
+    text-decoration: none;
+}
+.comment-list .reply {
+    width: 50px;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    line-height: 30px;
+    text-align: right;
+}
+.comment-list .comment {
+    margin-top: 10px;
+}
+.comment-form p {
+    position: relative;
+    padding-left: 140px;
+}
+.comment-form p label {
+    position: absolute;
+    width: 120px;
+    left: 0;
+    line-height: 30px;
+    font-size: 16px;
+
+}
+.comment-form input[type='text'], .comment-form textarea {
+    left: 140px;
+    border: none;
+    font-weight: bold;
+    color: #999;
+    background: #373737;
+    font-size: 14px;
+    height: 40px;
+    padding: 0 0 0 1%;
+    margin: 0;
+    border-radius: 5px;
+    width: 99%;
+    line-height: 40px;
+}
+.comment-form textarea {
+    line-height: 25px;
+    height: 150px;
+    padding: 1%;
+    width: 98%;
+}
+.comment-form input[type="submit"] {
+    background: #00B5B5;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    -webkit-transition: .07s ease-in;
+    -moz-transition: .07s ease-in;
+    -o-transition: .07s ease-in;
+    transition: .07s ease-in;
+    padding: 0 10px 0 10px;
+    margin: 0;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+.comment-form input[type="submit"]:hover {
+    background-color: #00CFCF;
+    cursor: pointer;
+}
+.comment-form .form-submit {
+    text-align: right;
+}
+#reply-title {
+    font-size: 32px;
+    margin-top: 10px;
+}
+.comment-form .comment-form-comment, .comment-form .form-allowed-tags {
+    padding: 0;
+}
+.comment-form .comment-form-comment label {
+    display: none;
+}
+.comment-form .comment-notes {
+    display: none;
+}
+.comment-form .logged-in-as {
+    padding-left: 0;
+}
+.comment-form-captcha label {
+    line-height: 40px !important;
+    text-align: right;
+}
+.comment-form-captcha {
+    width: 100px;
+}

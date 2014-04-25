@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>AngularJS Tutorial – Learn AngularJS in 30 minutes | RevillWeb</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="pingback" href="http://www.revillweb.com/xmlrpc.php">
+    <link rel="icon" type="image/png" href="http://www.revillweb.com/wp-content/themes/RevillWeb/images/favicon.ico">
+    <meta name="verify-blogdash" content="b012513d23c5967dc7a8015e8b9c9a7a">
+	<link rel="alternate" type="application/rss+xml" title="RevillWeb » AngularJS Tutorial – Learn AngularJS in 30 minutes Comments Feed" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/feed/">
+<link rel="stylesheet" id="rev-style-css" href="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="rev-ui-style-css" href="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/ui-elements.css" type="text/css" media="all">
+<link rel="stylesheet" id="rev-icons-css" href="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/font-icons.css" type="text/css" media="all">
+<script id="LR1" type="text/javascript" async="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/client.js"></script><script src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/cb=gapi.loaded_1" async=""></script><script src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/platform.js" gapi_processed="true"></script><script type="text/javascript" async="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/plusone.js"></script><script id="twitter-wjs" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/widgets.js"></script><script id="facebook-jssdk" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/all.js"></script><script async="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/analytics.js"></script><script type="text/javascript" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/jquery-2.0.3.min.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/jquery.js"></script>
+<script type="text/javascript" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/jquery-migrate.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.revillweb.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.revillweb.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="PHP Ternary Operator / PHP Inline IF" href="http://www.revillweb.com/tutorials/php-ternary-operator-php-inline-if/">
+<link rel="next" title="CodeIgniter Tutorial – Learn CodeIgniter in 40 minutes" href="http://www.revillweb.com/tutorials/codeigniter-tutorial-learn-codeigniter-in-40-minutes/">
+<meta name="generator" content="WordPress 3.8">
+<link rel="canonical" href="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb.html">
+<link rel="shortlink" href="http://www.revillweb.com/?p=16">
+
+<style type="text/css">
+  .eazycfc-hide { display: none; }
+</style>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-46617843-1', 'revillweb.com');
+        ga('send', 'pageview');
+    </script>
+    <!-- BuySellAds Ad Code -->
+    <script type="text/javascript">
+        (function(){
+            var bsa = document.createElement('script');
+            bsa.type = 'text/javascript';
+            bsa.async = true;
+            bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+            (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+        })();
+    </script><script type="text/javascript" async="" src="http://s3.buysellads.com/ac/bsa.js"></script>
+    <!-- End BuySellAds Ad Code -->
+<script type="text/javascript" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/getAllAppDefault.esi"></script><script type="text/javascript" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/checkOAuth.esi"></script><link rel="stylesheet" type="text/css" href="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/buttons.5be48d105d7701b1bc41eccdea7af7f3.css"><script type="text/javascript" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/plusone.js"></script><script type="text/javascript" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/getCount2.php"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://m-static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body data-twttr-rendered="true" onclick="if(stWidget.buttonClicked==false){stWidget.stopClosing=false;stWidget.openDuration=0;stWidget.stClose(100);}" style=""><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/hub(1).html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><iframe id="twttrHubFrame" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrame" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/dgdTycPTSRj.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/dgdTycPTSRj(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+	<div class="header" id="header">
+		<div class="rev-container">
+            <div class="logo-wrapper">
+                <a href="http://www.revillweb.com/" class="logo">
+                    <img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/logo.png" alt="RevillWeb" border="0">
+                </a>
+                <div class="social">
+                    <a href="https://plus.google.com/113128976126646245587" rel="publisher" target="_blank"><i class="icon-google-plus3"></i></a>
+                    <a href="https://www.facebook.com/pages/Revillweb/264778196907648" target="_blank"><i class="icon-facebook2"></i></a>
+                    <a href="https://twitter.com/revillweb" target="_blank"><i class="icon-twitter2"></i></a>
+                </div>
+            </div>
+			<ul class="nav">
+                <li><a href="http://www.revillweb.com/">HOME</a></li><li><a href="http://www.revillweb.com/blog/">BLOG</a></li><li><a href="http://www.revillweb.com/privacy-policy/">PRIVACY POLICY</a></li><li><a href="http://www.revillweb.com/write-for-us/">WRITE FOR US</a></li><li class="banner-menu-trigger top-level"><a href="http://www.revillweb.com/tutorials">TUTORIALS</a><ul class="sub-nav" style="width: 750px;"><li>
+                                <a href="http://www.revillweb.com/tutorials">
+                                <div class="menu-circle menu-circle-right"></div>
+                                <span>All</span>
+                                <br>
+                                All our Tutorials
+                                </a>
+                              </li><li>
+                                <a href="http://www.revillweb.com/tutorial_categories/css-tutorials">
+                                <div class="menu-circle menu-circle-right" style="background-color: #FF4500;"></div>
+                                <span>CSS</span>
+                                <br>
+                                Make it beautiful.
+                                </a>
+                              </li><li>
+                                <a href="http://www.revillweb.com/tutorial_categories/html-tutorials">
+                                <div class="menu-circle menu-circle-right" style="background-color: #43B3DC;"></div>
+                                <span>HTML</span>
+                                <br>
+                                Construct brilliance.
+                                </a>
+                              </li><li>
+                                <a href="http://www.revillweb.com/tutorial_categories/javascript-tutorials">
+                                <div class="menu-circle menu-circle-right" style="background-color: #44DC43;"></div>
+                                <span>JavaScript</span>
+                                <br>
+                                Charge the experience.
+                                </a>
+                              </li><li>
+                                <a href="http://www.revillweb.com/tutorial_categories/php-tutorials">
+                                <div class="menu-circle menu-circle-right" style="background-color: #FF4E4E;"></div>
+                                <span>PHP</span>
+                                <br>
+                                Stabilize perfection. 
+                                </a>
+                              </li></ul></li><li class="banner-menu-trigger top-level"><a href="http://www.revillweb.com/articles">ARTICLES</a><ul class="sub-nav" style="width: 450px;"><li>
+                                <a href="http://www.revillweb.com/articles">
+                                <div class="menu-circle menu-circle-right"></div>
+                                <span>All</span>
+                                <br>
+                                All our Articles
+                                </a>
+                              </li><li>
+                                <a href="http://www.revillweb.com/article_categories/web-design-articles">
+                                <div class="menu-circle menu-circle-right" style="background-color: #7BD736;"></div>
+                                <span>Web Design</span>
+                                <br>
+                                
+                                </a>
+                              </li><li>
+                                <a href="http://www.revillweb.com/article_categories/web-development-articles">
+                                <div class="menu-circle menu-circle-right" style="background-color: #33CC78;"></div>
+                                <span>Web Development</span>
+                                <br>
+                                
+                                </a>
+                              </li></ul></li>			</ul>
+		</div>
+	</div>
+    <div class="rev-container additional-header">
+        <div class="additional-header-title">
+            <a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#" class="toggle-additional-menu"><i class="icon-menu6"></i> MENU</a>
+        </div>
+        <div class="additional-header-menu">
+            <script>
+                $(function(){
+                   $(document).on("click", ".hasMenu", function(){
+                       var _this = $(this);
+                       _this.find('i').toggleClass("icon-minus");
+                       _this.find('i').toggleClass("icon-plus");
+                       _this.parent().next(".subMenu").slideToggle();
+                   });
+                    $(document).on("click", ".toggle-additional-menu", function(){
+                        $('.additional-header-list').slideToggle();
+                    });
+                });
+            </script>
+            <ul class="additional-header-list">
+                <li><a href="http://www.revillweb.com/" class=""> HOME</a></li><li><a href="http://www.revillweb.com/blog/" class=""> BLOG</a></li><li><a href="http://www.revillweb.com/privacy-policy/" class=""> PRIVACY POLICY</a></li><li><a href="http://www.revillweb.com/write-for-us/" class=""> WRITE FOR US</a></li><li><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#" class="hasMenu"><i class="icon-plus"></i> TUTORIALS</a></li><ul style="display: none;" class="subMenu"><li><a href="http://www.revillweb.com/tutorials"><div class="circle-small"></div> All</a></li><li><a href="http://www.revillweb.com/tutorial_categories/css-tutorials"><div class="circle-small" style="background-color: #FF4500;"></div> CSS</a></li><li><a href="http://www.revillweb.com/tutorial_categories/html-tutorials"><div class="circle-small" style="background-color: #43B3DC;"></div> HTML</a></li><li><a href="http://www.revillweb.com/tutorial_categories/javascript-tutorials"><div class="circle-small" style="background-color: #44DC43;"></div> JavaScript</a></li><li><a href="http://www.revillweb.com/tutorial_categories/php-tutorials"><div class="circle-small" style="background-color: #FF4E4E;"></div> PHP</a></li></ul><li><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#" class="hasMenu"><i class="icon-plus"></i> ARTICLES</a></li><ul style="display: none;" class="subMenu"><li><a href="http://www.revillweb.com/articles"><div class="circle-small"></div> All</a></li><li><a href="http://www.revillweb.com/article_categories/web-design-articles"><div class="circle-small" style="background-color: #7BD736;"></div> Web Design</a></li><li><a href="http://www.revillweb.com/article_categories/web-development-articles"><div class="circle-small" style="background-color: #33CC78;"></div> Web Development</a></li></ul>            </ul>
+        </div>
+    </div>
+	<div class="main-frame">
+		<div class="rev-container content-block">
+		    <div class="content-left">
+    <link rel="stylesheet" id="post-css" href="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/post.css" type="text/css" media="all">
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.5/styles/monokai_sublime.min.css">
+    <script src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+										
+<article id="post-16" class="post-16 tutorials type-tutorials status-publish hentry tag-angularjs tag-framework tag-javascript-tutorials">
+    <div class="post-data-frame">
+        <ul class="post-data">
+            <li><link rel="stylesheet" id="post-list-css" href="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/category-list.css" type="text/css" media="all">
+<ul class="categories">
+    <li class="" style="background-color: #43B3DC;"><a href="http://www.revillweb.com/tutorial_categories/html-tutorials" class="">HTML</a></li><li class="" style="background-color: #44DC43;"><a href="http://www.revillweb.com/tutorial_categories/javascript-tutorials" class="">JS</a></li></ul></li>
+                        <li><div aria-hidden="true" class="icon icon-brain"></div> Intermediate</li>
+            <li><div aria-hidden="true" class="icon icon-clock2"></div> 30 Minutes</li>
+                        <li><div aria-hidden="true" class="icon icon-bubble4"></div> 68 Comments</li>
+            <li><div aria-hidden="true" class="icon icon-star3"></div> 4.7 / 5</li>
+            <li><div aria-hidden="true" class="icon icon-calendar4"></div> December 22, 2013</li>
+        </ul>
+    </div>
+    <header class="entry-header">
+        <h1 class="entry-title">AngularJS Tutorial – Learn AngularJS in 30 minutes</h1>
+    </header><!-- .entry-header -->
+    <div class="entry-intro">
+                    <div class="entry-thumbnail">
+                <img width="500" height="500" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/square.png" class="attachment-post-thumbnail wp-post-image" alt="AngularJS">            </div>
+                <div class="entry-excerpt">
+            <p>This <strong>AngularJS</strong> tutorial is going to take you through a streamlined set of instructions and cram pack you full of AngularJS knowledge within 30 minutes. After this short but detailed <strong>AngularJS tutorial</strong> you will be able to quickly create powerful and intuitive web applications.</p>
+        </div>
+            </div>
+    <div class="entry-content">
+        <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <div class="post-ad">
+            <ins class="adsbygoogle adslot" style="display:inline-block;" data-ad-client="ca-pub-2778019522593933" data-ad-slot="3335852758"></ins>
+        </div>
+        <h2>GETTING STARTED WITH ANGULARJS</h2>
+<p>Before we can do anything we need to create a simple HTML page that we can include <strong>AngularJS</strong> into. Create a file called <span class="inline-code">index.html</span> and use the following code:</p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code>
+</pre>
+<p>Now that we have a HTML page to work with, head over to <a href="http://angularjs.org/" target="_blank">http://angularjs.org/</a> (opens a new tab) and copy the latest CDN link for <strong>AngularJS</strong>. Or just use this one: <strong>https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js</strong>. Now you have the CDN location of the latest <strong>AngularJS</strong> version, include it within the head tags of your HTML page as follows:</p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>
+<p>Ok, now we have a HTML page and <strong>AngularJS</strong> included ready for use, lets move on.</p>
+<h2>SETTING UP THE PAGE FOR ANGULARJS</h2>
+<p>There are a few things we need to do to tell <strong>AngularJS</strong> that it needs to render this page as an application. As this is a quick <strong>AngularJS tutorial</strong> we will not be going into detail as to how you can create multi-application and multi-controller pages, we are just going to declare this page as an <strong>AngularJS</strong> app, and its really simple!</p>
+<p>Simply add <span class="inline-code">ng-app=”MyTutorialApp”</span> to the content DIV as follows: </p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">ng-app</span>=<span class="value">'MyTutorialApp'</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code>
+</pre>
+<p>Now we have told <strong>AngularJS</strong> that this DIV is an angular application, we need to declare which controller to use, as follows:</p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">ng-app</span>=<span class="value">'MyTutorialApp'</span> <span class="attribute">ng-controller</span>=<span class="value">'MainController'</span>&gt;</span>
+
+	<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code>
+</pre>
+<p><span class="inline-code">MainController</span> is just a name that I made up, controllers should be named with some meaning and as this controller will be handling most of the application, main seems quite appropriate. Some would argue that this still is not enough definition, for this tutorial though, its fine! Ok, we now know what anything within the <span class="inline-code">#content</span> DIV will be controlled by the <span class="inline-code">MainController</span>, but where is this controller? We need to make it! Within the same directory as you index.html file we need to create a JS file called <span class="inline-code">app.js</span> and it should look like the following:</p>
+<pre><code class="javascript">
+<span class="keyword">var</span> app = angular.module(<span class="string">'MyTutorialApp'</span>,[]);
+</code>
+</pre>
+<p>All this file is doing is creating an <strong>AngularJS</strong> app called <span class="inline-code">MyTutorialApp</span> and assigning it to the app variable which we can use later on. Now we need to create another file called, <span class="inline-code">maincontroller.js</span> and it should look as follows:</p>
+<pre><code class="javascript">
+app.controller(<span class="string">"MainController"</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope)</span>{</span>
+		
+});
+</code>
+</pre>
+<p>This is assigning a controller called, <span class="inline-code">MainController</span> to the <span class="inline-code">MyTutorialApp</span> application. All this JavaScript could be placed within the same JavaScript file but it is good practice to separate them out to keep your code maintainable and easier to understand. Just remember that <span class="inline-code">app.js</span> needs to be included before <span class="inline-code">maincontroller.js</span>. Lets do this now and include both files within out HTML so we can get started!</p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"app.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"maincontroller.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">ng-app</span>=<span class="value">'MyTutorialApp'</span> <span class="attribute">ng-controller</span>=<span class="value">'MainController'</span>&gt;</span>
+
+	<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code>
+</pre>
+<p>We now have the page and <strong>AngularJS</strong> application ready, lets move on with this <strong>AngularJS tutorial</strong>.</p>
+<h2>UNDERSTANDING THE SCOPE</h2>
+<p>When we created the <span class="inline-code">maincontroller.js</span> code you may have noticed the $scope variable that we added as a parameter to the controller function. This is where we will assign all our controller variables which will then make them available within the <span class="inline-code">#content</span> DIV in the HTML page. Take a look at the following example to understand this concept. Declare a <span class="inline-code">$scope</span> variable within the controller:</p>
+<pre><code class="javascript">
+app.controller(<span class="string">"MainController"</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope)</span>{</span>
+    $scope.understand = <span class="string">"I now understand how the scope works!"</span>;
+});
+</code>
+</pre>
+<p>In the above code we simply created a scope variable and assigned a string to it. Now we can access this within our HTML.</p>
+<pre class="prettyprint"><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"app.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"maincontroller.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">ng-app</span>=<span class="value">'MyTutorialApp'</span> <span class="attribute">ng-controller</span>=<span class="value">'MainController'</span>&gt;</span>
+			{{understand}}
+	<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code>
+</pre>
+<p>Within the above HTML we wrap the <strong>understand</strong> variable with <span class="inline-code">{{}}</span> so <strong>AngularJS</strong> knows it needs to do something with it. Note how we have not added the <span class="inline-code">$scope.</span> to the front of the variable name. If you now view your index.html file within a browser, you should see the following:</p>
+<div class="figure">
+<img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/understandscope.png" alt="AngularJS Tutorial - Scope" width="578" height="274" class="alignnone size-full wp-image-670">
+</div>
+<p>Now you should understand what scope variables are and that they are also available within the HTML by wrapping then with {{}}. You should also understand that the scope is available only to that controller so you could not access the “knowledge” variable from outside the #content DIV, unless the same controller was defined.</p>
+<h2>UNDERSTANDING BINDING</h2>
+<p>So, it was pretty cool that we can declare a scope variable within the JS and instantly access it within the HTML, but <strong>AngularJS</strong> can offer so much more. Data binding is a large topic but this <strong>AngularJS tutorial</strong> will cover the most important parts to ensure you understand what is possible and allow you to investigate further on your own (Or wait for more <strong>AngularJS tutorials</strong> :D). To understand this concept, lets declare a scope variable which will act as a model. Modify <span class="inline-code">maincontroller.js</span> to look as below: </p>
+<pre><code class="javascript">
+app.controller(<span class="string">"MainController"</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope)</span>{</span>
+     $scope.inputValue = <span class="string">""</span>;
+});
+</code>
+</pre>
+<p>Now lets add some additional HTML to our page: </p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"app.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"maincontroller.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">ng-app</span>=<span class="value">'MyTutorialApp'</span> <span class="attribute">ng-controller</span>=<span class="value">'MainController'</span>&gt;</span>
+		<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">'text'</span> <span class="attribute">ng-model</span>=<span class="value">'inputValue'</span> /&gt;</span>
+		{{inputValue}}
+	<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code>
+</pre>
+<p>Above we have added a simple text input and used <span class="inline-code">ng-model</span> to bind it to the scope variable <span class="inline-code">inputValue</span>. Note how we did not wrap it in <span class="inline-code">{{}}</span> as it is being used within a <span class="inline-code">ng-*</span> tag. Additionally we are outputting the <span class="inline-code">inputValue</span> scope variable onto the page as we did before with the <span class="inline-code">understand</span> variable.</p>
+<p>By doing all this we have bound the input value to the variable. This means that whenever the input value changes, the variable will update to match this. Open the page in a web browser and start typing within the input box. You should see something like the following: </p>
+<div class="figure">
+<img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/binding1.png" alt="AngularJS Tutorial - Binding" width="492" height="198" class="alignnone size-full wp-image-671">
+</div>
+<p>As you type the scope variable updates with the new input value and then as you are outputting the variable on this screen this also updates too, magic! Now you have a way of keeping various elements and values in sync within the page. Lets move on to a more complex example to get a better understanding of what is possible. Update <span class="inline-code">maincontroller.js</span> to look like below: </p>
+<pre><code class="javascript">
+app.controller(<span class="string">"MainController"</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope)</span>{</span>
+	$scope.selectedPerson = <span class="number">0</span>;
+	$scope.selectedGenre = <span class="literal">null</span>;
+	$scope.people = [
+		{
+			id: <span class="number">0</span>,
+			name: <span class="string">'Leon'</span>,
+			music: [
+				<span class="string">'Rock'</span>,
+				<span class="string">'Metal'</span>,
+				<span class="string">'Dubstep'</span>,
+				<span class="string">'Electro'</span>
+			]
+		},
+		{
+			id: <span class="number">1</span>,
+			name: <span class="string">'Chris'</span>,
+			music: [
+				<span class="string">'Indie'</span>,
+				<span class="string">'Drumstep'</span>,
+				<span class="string">'Dubstep'</span>,
+				<span class="string">'Electro'</span>
+			]
+		},
+		{
+			id: <span class="number">2</span>,
+			name: <span class="string">'Harry'</span>,
+			music: [
+				<span class="string">'Rock'</span>,
+				<span class="string">'Metal'</span>,
+				<span class="string">'Thrash Metal'</span>,
+				<span class="string">'Heavy Metal'</span>
+			]
+		},
+		{
+			id: <span class="number">3</span>,
+			name: <span class="string">'Allyce'</span>,
+			music: [
+				<span class="string">'Pop'</span>,
+				<span class="string">'RnB'</span>,
+				<span class="string">'Hip Hop'</span>
+			]
+		}
+	];
+});
+</code>
+</pre>
+<p>We have declared three scope variables, <span class="inline-code">selectedPerson</span> is going to hold the object of the selected person. <span class="inline-code">selectedGenre</span> is going to hold the string value of the selected genre. Finally we have an array of objects which are people with their own musics tastes. What we are going to hope to achieve is have two select drop downs. One you will be able to select the person, then the other, thanks to binding will automatically update to allow you to select that persons music genres. Lets add this HTML elements to our page: </p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"app.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"maincontroller.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">ng-app</span>=<span class="value">'MyTutorialApp'</span> <span class="attribute">ng-controller</span>=<span class="value">'MainController'</span>&gt;</span>
+		<span class="tag">&lt;<span class="title">select</span> <span class="attribute">ng-model</span>=<span class="value">'selectedPerson'</span> <span class="attribute">ng-options</span>=<span class="value">'obj.name for obj in people'</span>&gt;</span><span class="tag">&lt;/<span class="title">select</span>&gt;</span>
+		<span class="tag">&lt;<span class="title">select</span> <span class="attribute">ng-model</span>=<span class="value">'selectedGenre'</span>&gt;</span>
+			<span class="tag">&lt;<span class="title">option</span> <span class="attribute">ng-repeat</span>=<span class="value">'label in people[selectedPerson.id].music'</span>&gt;</span>{{label}}<span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+		<span class="tag">&lt;/<span class="title">select</span>&gt;</span>
+	<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code>
+</pre>
+<p>There are some new bits here so lets look at them in detail. Firstly we have a select input with <span class="inline-code">ng-options</span> tag. This allows us to populate this select input with the values from the people scope variable, using the name attribute within the person objects as the label, making the actual value of the select option, the object itself. This <strong>AngularJS tutorial</strong> is not going to go into great details of <span class="inline-code">ng-options</span> you can read more about that <a href="http://docs.angularjs.org/api/ng.directive:select" target="_blank">here</a>. Play around and see what is possible.</p>
+<p>The next select input is populate itself a different way, for demonstrative purposes. “ng-repeat” in my mind is one of the most powerful features of <strong>AngularJS</strong>. <span class="inline-code">ng-repeat</span> simple allows you to replicate HTML elements based on an array or set of objects. In the HTML above “ng-repeat” will create an option for each of the music genres within the people.music array based on the <span class="inline-code">selectedPersons</span> ID value which is determined by the first selected box as we have declared <span class="inline-code">selectedPerson</span> as its model as we did before with the input.</p>
+<p class="alert-info"><strong>Note:</strong> <span class="inline-code">ng-repeat</span> can be used on any HTML element, once more, go and experiment!</p>
+<p>Within the ng-reapted option tag we have then put <span class="inline-code">{{label}}</span> between the opening and closing option tags, this is to output the label that we declared within the <span class="inline-code">ng-repeat</span>. Open it within the browser, select a person and you should see something like the following: </p>
+<div class="figure">
+<img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/binding2.png" alt="AngularJS Tutorial - Binding" width="492" height="229" class="alignnone size-full wp-image-672">
+</div>
+<p>So you can see that as we have used the model to bind the selects value we can then use this anywhere where the same scope is available to update other elements!</p>
+<p class="alert-info"><strong>Note:</strong> people[selectedPerson.id].music is only working as the people ID#s are the same as the array indexes. This would not be an ideal solution in a real world situation as you cannot guarantee that the people ID#s will match the array index.</p>
+<p>You should now have a good understanding of what binding is about and what is possible. We have also looked at ng-repeat and ng-options two powerful features of <strong>AngularJS</strong>.</p>
+<h2>FILTERING DATA WITH ANGULARJS</h2>
+<p>This <strong>AngularJS tutorial</strong> is now going to cover filtering as this is another super powerful <strong>AngularJS</strong> feature. We are going to reuse the people scope array from the previous section and create a simple interface that will allow us to search for the peoples names and output the results to a page. Update your HTML as follows: </p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"app.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"maincontroller.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">ng-app</span>=<span class="value">'MyTutorialApp'</span> <span class="attribute">ng-controller</span>=<span class="value">'MainController'</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">'text'</span> <span class="attribute">ng-model</span>=<span class="value">'searchText'</span> /&gt;</span>
+        <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">ng-repeat</span>=<span class="value">'person in people | filter:searchText'</span>&gt;</span>#{{person.id}} {{person.name}}<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code>
+</pre>
+<p>Here we have added a text input and provided it with a model <span class="inline-code">searchText</span> we don’t need to declare this physically in the scope within <span class="inline-code">maincontroller.js</span>. We have also created a un-ordered list and added an <span class="inline-code">ng-repeat</span> to the list element which will create a list element for every person within the people array which we created in the last section. If you open this in your browser now, you should see the following:</p>
+<div class="figure">
+<img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/filter1.png" alt="AngularJS Tutorial - Filtering" width="575" height="232" class="alignnone size-full wp-image-673">
+</div>
+<p>You will be able to see all the names of the people within the people array displayed within a list under the search input. Looking back at the HTML we can see some additional code within the ng-repeat. We have added a pipe | and then specified filter and then the model. This will call the <strong>AngularJS</strong> filter directive and provide it with the <span class="inline-code">searchText</span> model. The <span class="inline-code">ng-repeat</span> will then display results based on what the filter returns. Go ahead and type something within the text box and see the results automatically update.</p>
+<p>Filtering is as simple as that! This <strong>AngularJS</strong> tutorial will not cover more advance filtering or custom filters, but keep tuned for more <strong>AngularJS tutorials</strong> that will!</p>
+<h2>HIDING AND SHOWING ELEMENTS WITH ANGULARJS</h2>
+<p>This section of the <strong>AngularJS tutorial</strong> is going to look at how you can hide and show elements. We are going to continue using the people array as our data-set but we need to add some additional data to allow us to demonstrate <span class="inline-code">ng-show</span> and <span class="inline-code">ng-hide</span>. Update your <span class="inline-code">maincontroller.js</span> file as follows: </p>
+<pre><code class="javascript">
+app.controller(<span class="string">"MainController"</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope)</span>{</span>
+  $scope.people = [
+        {
+            id: <span class="number">0</span>,
+            name: <span class="string">'Leon'</span>,
+            music: [
+                <span class="string">'Rock'</span>,
+                <span class="string">'Metal'</span>,
+                <span class="string">'Dubstep'</span>,
+                <span class="string">'Electro'</span>
+            ],
+            live: <span class="literal">true</span>
+        },
+        {
+            id: <span class="number">1</span>,
+            name: <span class="string">'Chris'</span>,
+            music: [
+                <span class="string">'Indie'</span>,
+                <span class="string">'Drumstep'</span>,
+                <span class="string">'Dubstep'</span>,
+                <span class="string">'Electro'</span>
+            ],
+            live: <span class="literal">true</span>
+        },
+        {
+            id: <span class="number">2</span>,
+            name: <span class="string">'Harry'</span>,
+            music: [
+                <span class="string">'Rock'</span>,
+                <span class="string">'Metal'</span>,
+                <span class="string">'Thrash Metal'</span>,
+                <span class="string">'Heavy Metal'</span>
+            ],
+            live: <span class="literal">false</span>
+        },
+        {
+            id: <span class="number">3</span>,
+            name: <span class="string">'Allyce'</span>,
+            music: [
+                <span class="string">'Pop'</span>,
+                <span class="string">'RnB'</span>,
+                <span class="string">'Hip Hop'</span>
+            ],
+            live: <span class="literal">true</span>
+        }
+    ];
+});
+</code></pre>
+<p>You can see that we have added a live flag to each of the people, the only person with the flag set to false is Harry. To demonstrate both <span class="inline-code">ng-hide</span> and <span class="inline-code">ng-show</span>, add an additional un-ordered list to your HTML as follows:</p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"app.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"maincontroller.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">ng-app</span>=<span class="value">'MyTutorialApp'</span> <span class="attribute">ng-controller</span>=<span class="value">'MainController'</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">'text'</span> <span class="attribute">ng-model</span>=<span class="value">'searchText'</span> /&gt;</span>
+        <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">ng-repeat</span>=<span class="value">'person in people | filter:searchText'</span>&gt;</span>#{{person.id}} {{person.name}}<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">ng-repeat</span>=<span class="value">'person in people | filter:searchText'</span>&gt;</span>#{{person.id}} {{person.name}}<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>
+<p>This will simply output the same data twice. Now we are going to use <span class="inline-code">ng-hide</span> and <span class="inline-code">ng-show</span> to conditionally hide list elements based on the live flag we have just created. Update your HTML to match the below code: </p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"app.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"maincontroller.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">ng-app</span>=<span class="value">'MyTutorialApp'</span> <span class="attribute">ng-controller</span>=<span class="value">'MainController'</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">'text'</span> <span class="attribute">ng-model</span>=<span class="value">'searchText'</span> /&gt;</span>
+        <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">ng-repeat</span>=<span class="value">'person in people | filter:searchText'</span> <span class="attribute">ng-show</span>=<span class="value">'person.live == true'</span>&gt;</span>#{{person.id}} {{person.name}}<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">ng-repeat</span>=<span class="value">'person in people | filter:searchText'</span> <span class="attribute">ng-hide</span>=<span class="value">'person.live == false'</span>&gt;</span>#{{person.id}} {{person.name}}<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>
+<p>As you can see <span class="inline-code">ng-show</span> and <span class="inline-code">ng-hide</span> are used in exactly the same way, except they are the opposite of each other (obviously). In the above example we are referencing the person variable which is declared as part of the <span class="inline-code">ng-repeat</span> and just evaluation whether its live attribute is true or false. If you open this example in your browser you will see that <span class="inline-code">Harry</span> no longer appears in either list.</p>
+<div class="figure">
+<img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/filter2.png" alt="AngularJS Tutorial - Filtering" width="575" height="331" class="alignnone size-full wp-image-674">
+</div>
+<p>And that is how easy it is to conditionally hide or show an element with <strong>AngularJS</strong>.</p>
+<h2>EVENTS WITH ANGULARJS</h2>
+<p>The final part of this quick <strong>AngularJS tutorial</strong> will look at events. Events have always been a powerful feature of JavaScript frameworks such as jQuery and this has not changed with <strong>AngularJS</strong>. To demonstrate this we are going to add another input and a button to our HTML as below: </p>
+<pre><code class="xml">
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">title</span>&gt;</span>Learning AngularJS<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"app.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"maincontroller.js"</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'content'</span> <span class="attribute">ng-app</span>=<span class="value">'MyTutorialApp'</span> <span class="attribute">ng-controller</span>=<span class="value">'MainController'</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">'text'</span> <span class="attribute">ng-model</span>=<span class="value">'searchText'</span> /&gt;</span>
+        <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">li</span> <span class="attribute">ng-repeat</span>=<span class="value">'person in people | filter:searchText'</span> <span class="attribute">ng-show</span>=<span class="value">'person.live == true'</span>&gt;</span>#{{person.id}} {{person.name}}<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">'text'</span> <span class="attribute">ng-model</span>=<span class="value">'newPerson'</span> /&gt;</span>
+        <span class="tag">&lt;<span class="title">button</span> <span class="attribute">ng-click</span>=<span class="value">'addNew()'</span>&gt;</span>Add<span class="tag">&lt;/<span class="title">button</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>
+<p>We have just added an input with a model <span class="inline-code">newPerson</span> and a button with <span class="inline-code">ng-click</span> which will call a function called <span class="inline-code">addNew</span>. We now need to update our <span class="inline-code">maincontroller.js</span> file as follows: </p>
+<pre><code class="javascript">
+app.controller(<span class="string">"MainController"</span>, <span class="function"><span class="keyword">function</span><span class="params">($scope)</span>{</span>
+  $scope.people = [
+        {
+            id: <span class="number">0</span>,
+            name: <span class="string">'Leon'</span>,
+            music: [
+                <span class="string">'Rock'</span>,
+                <span class="string">'Metal'</span>,
+                <span class="string">'Dubstep'</span>,
+                <span class="string">'Electro'</span>
+            ],
+            live: <span class="literal">true</span>
+        },
+        {
+            id: <span class="number">1</span>,
+            name: <span class="string">'Chris'</span>,
+            music: [
+                <span class="string">'Indie'</span>,
+                <span class="string">'Drumstep'</span>,
+                <span class="string">'Dubstep'</span>,
+                <span class="string">'Electro'</span>
+            ],
+            live: <span class="literal">true</span>
+        },
+        {
+            id: <span class="number">2</span>,
+            name: <span class="string">'Harry'</span>,
+            music: [
+                <span class="string">'Rock'</span>,
+                <span class="string">'Metal'</span>,
+                <span class="string">'Thrash Metal'</span>,
+                <span class="string">'Heavy Metal'</span>
+            ],
+            live: <span class="literal">false</span>
+        },
+        {
+            id: <span class="number">3</span>,
+            name: <span class="string">'Allyce'</span>,
+            music: [
+                <span class="string">'Pop'</span>,
+                <span class="string">'RnB'</span>,
+                <span class="string">'Hip Hop'</span>
+            ],
+            live: <span class="literal">true</span>
+        }
+    ];
+    $scope.newPerson = <span class="literal">null</span>;
+    $scope.addNew = <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+        <span class="keyword">if</span> ($scope.newPerson != <span class="literal">null</span> &amp;&amp; $scope.newPerson != <span class="string">""</span>) {
+            $scope.people.push({
+                id: $scope.people.length,
+                name: $scope.newPerson,
+                live: <span class="literal">true</span>,
+                music: []
+            });
+        }
+    }
+});
+</code></pre>
+<p>The above JS shows that we have declared the <span class="inline-code">newPerson</span> scope variable and a scope function <span class="inline-code">addNew</span> which will be called on the button click thanks to the <span class="inline-code">ng-click</span> we added to the button.</p>
+<p>Within the <span class="inline-code">addNew</span> function we are just checking that the <span class="inline-code">newPerson</span> value is not null or empty and then added a new object to the end of the people array. This is a very simple example of how a click event can be used within <strong>AngularJS</strong>. There are many more available such as <span class="inline-code">ng-change</span>, <span class="inline-code">ng-checked</span>, <span class="inline-code">ng-select</span>, etc but this <strong>AngularJS tutorial</strong> will not go into any more detail, you can head over to <a href="http://docs.angularjs.org/api/" target="_blank">AngularJS</a> if you want to learn more.</p>
+<h2>CONCLUSION</h2>
+<p>This quick <strong>AngularJS tutorial</strong> should have given you enough to understand how <strong>AngularJS</strong> works on a high level and what it is capable of. You should now be able to go ahead and starting creating your own <strong>AngularJS</strong> applications to learn more.</p>
+<p>While learning <strong>AngularJS</strong> I found that the documentation was not great and it took a lot of experimentation and searching to find working examples. I recommend you get a book or two, I used <a href="http://www.amazon.com/gp/product/1449344852/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449344852&linkCode=as2&tag=revwebdes-20">AngularJS</a><img src="http://www.assoc-amazon.com/e/ir?t=revwebdes-20&l=as2&o=1&a=1449344852" width="0" height="0" border="0" alt="" style="border: none !important; margin: 0px !important; display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 1px 1px;"> as a reference book, it has some good examples. If your in the US buy it <a href="http://www.amazon.com/gp/product/1449344852/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1449344852&linkCode=as2&tag=revwebdes-20">here</a>, if you in the UK buy it <a href="http://www.amazon.co.uk/gp/product/1449344852/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=1449344852&linkCode=as2&tag=revwebdes-21">here</a>. I hope this tutorial got you up and running with <strong>AngularJS</strong> in about 30 minutes. Please give me your feedback via the comments box.</p>
+        <div class="post-ad">
+            <ins class="adsbygoogle adslot" style="display:inline-block;" data-ad-client="ca-pub-2778019522593933" data-ad-slot="4864977955"></ins>
+        </div>
+    </div><!-- .entry-content -->
+    <!-- .entry-meta -->
+    <div class="clearfix"></div>
+
+    <footer class="content-footer">
+        <div class="tags-and-rate">
+            <div class="tags">
+                                <div class="icon icon-tags"></div>
+                <ul class="tag-list">
+                    <li><a href="http://www.revillweb.com/?s=AngularJS">AngularJS</a></li><li><a href="http://www.revillweb.com/?s=Framework">Framework</a></li><li><a href="http://www.revillweb.com/?s=JavaScript">JavaScript</a></li>                </ul>
+                            </div>
+            <div class="rate">
+                                    RATE:
+                    <div class="inline-rating">
+                        <ul class="star-rating" data-post-id="16">
+                            <li class="current-rating" style="width:94%;"></li>
+                            <li><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#" title="1 / 5" class="one-star" data-value="1"></a></li>
+                            <li><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#" title="2 / 5" class="two-stars" data-value="2"></a></li>
+                            <li><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#" title="3 / 5" class="three-stars" data-value="3"></a></li>
+                            <li><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#" title="4 / 5" class="four-stars" data-value="4"></a></li>
+                            <li><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#" title="5 / 5" class="five-stars" data-value="5"></a></li>
+                        </ul>
+                    </div>
+                            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="entry-meta">
+            <div class="section entry-author">
+                <h3>Leon Revill</h3>
+                <img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/134293164c6542f37f000c36ba06096e" class="avatar avatar-120 photo" height="120" width="120">                I have over 6 years of commercial web development experience and have a keen interested in the latest emerging web technologies especially based around JavaScript. I use my spare time to turn my experience, ideas and love for web tech into informative articles, tutorials and more in hope to help others and learn more.                <div class="author-contact">
+                                        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/follow_button.1397165098.html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 157px; height: 20px;"></iframe>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                                <!-- Place this tag where you want the widget to render. -->
+                            <div id="___follow_0" style="position: absolute; width: 450px; left: -10000px;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I0_1398364990977" name="I0_1398364990977" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/saved_resource.html"></iframe></div><div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/110352195229113507420" data-rel="author" data-gapiscan="true" data-onload="true" data-gapistub="true"></div>
+
+                            <!-- Place this tag after the last widget tag. -->
+                            <script type="text/javascript">
+                                (function() {
+                                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                    po.src = 'https://apis.google.com/js/plusone.js';
+                                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                })();
+                            </script>
+
+                    
+                </div>
+            </div>
+            <div class="section entry-related-content">
+                <h3>Related Content</h3>
+                <ul><li><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#">Super useful JavaScript functions</a></li><li><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#">Twitter Bootstrap Tutorial – Up and running with Twitter Bootstrap in 20 Minutes</a></li><li><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#">CodeIgniter Tutorial – Learn CodeIgniter in 40 minutes</a></li></ul>            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="entry-comments">
+            <div class="comments-cat">
+    <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <ins class="adsbygoogle adslot" style="display:inline-block;" data-ad-client="ca-pub-2778019522593933" data-ad-slot="7678843553"></ins>
+</div>
+<link rel="stylesheet" id="comments-css" href="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/comments.css" type="text/css" media="all">
+<div id="comments" class="comments-area">
+            <h2 class="comments-title"><div class="icon icon-bubble4"></div> COMMENTS</h2>
+        <ol class="comment-list">
+            		<li class="comment even thread-even depth-1" id="comment-16">
+				<div id="div-comment-16" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/d55550a51ea1f7676f108706c2064a32" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Venkat</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-16">
+			December 30, 2013 at 1:34 pm</a>		</div>
+
+		<p>That was really helpful ,thanks</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=16#respond" onclick="return addComment.moveForm(&quot;div-comment-16&quot;, &quot;16&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-31">
+				<div id="div-comment-31" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/1b75c2ba4910db5c43f5b93b63e4f3fa" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Claude</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-31">
+			January 1, 2014 at 4:57 pm</a>		</div>
+
+		<p>Nice tutorial.  That being said, I’m not so sure I like Angular.JS, since I’m not a big fan of all this coding within the HTML, but, this is only an intro, so, maybe there are ways of getting the job done without adding events directly to tags.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=31#respond" onclick="return addComment.moveForm(&quot;div-comment-31&quot;, &quot;31&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment byuser comment-author-leon bypostauthor even depth-2" id="comment-42">
+				<div id="div-comment-42" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/134293164c6542f37f000c36ba06096e" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Leon Revill</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-42">
+			January 2, 2014 at 10:53 pm</a>		</div>
+
+		<p>I first thought this when I started looking at AngularJS, are you from a jQuery background? Binding events directly to HTML elements can be extremely powerful as more often than not you don’t actually need to write any JavaScript do to the nature of AngularJS views and their scope. AngularJS is much better (IMO) than DOM oriented JS frameworks such as jQuery because you can easily segregate, separate and reuse code, over and over again.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=42#respond" onclick="return addComment.moveForm(&quot;div-comment-42&quot;, &quot;42&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-106">
+				<div id="div-comment-106" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/52da8b3dca4df356f22353e665855856" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://www.jsjtt.com/" rel="external nofollow" class="url">jsjtt</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-106">
+			January 6, 2014 at 10:25 am</a>		</div>
+
+		<p>very good，it help me</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=106#respond" onclick="return addComment.moveForm(&quot;div-comment-106&quot;, &quot;106&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-115">
+				<div id="div-comment-115" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/349749f2b753b8a7bfb126cb3f0e039e" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">ibrahim</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-115">
+			January 14, 2014 at 2:33 pm</a>		</div>
+
+		<p>Really its helpful tutorials, thanks</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=115#respond" onclick="return addComment.moveForm(&quot;div-comment-115&quot;, &quot;115&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-116">
+				<div id="div-comment-116" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/af65d060af385abc8f6eb8e76ff6aac7" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://www.sqlist.co.uk/" rel="external nofollow" class="url">Yasir</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-116">
+			January 14, 2014 at 9:09 pm</a>		</div>
+
+		<p>Great tutorial, very informative. thanks</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=116#respond" onclick="return addComment.moveForm(&quot;div-comment-116&quot;, &quot;116&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-117">
+				<div id="div-comment-117" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/cf5880598f9ed484de58d5f388d5c1e2" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://railsfornovice.wordpress.com/" rel="external nofollow" class="url">Loganathan Sellappa</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-117">
+			January 15, 2014 at 3:06 pm</a>		</div>
+
+		<p>Awesome tutorial for beginners, thanks <img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=117#respond" onclick="return addComment.moveForm(&quot;div-comment-117&quot;, &quot;117&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-118">
+				<div id="div-comment-118" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/636b5fe02f2204e64381c803d2859c83" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Jack Nguyen</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-118">
+			January 16, 2014 at 5:58 am</a>		</div>
+
+		<p>Hi Leon,</p>
+<p>Loved your tutorial. Learned a lot. I was messing around with the example in Understanding Binding. Not sure if you used ng-repeat mainly for example purposes but I messed around with the code and came up with
+</p><pre><code class="undefined"></code></pre>
+<p> Should seem to work for as many people as there are in the list and it should always sync. Thanks  and cleared up a lot.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=118#respond" onclick="return addComment.moveForm(&quot;div-comment-118&quot;, &quot;118&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-119">
+				<div id="div-comment-119" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/636b5fe02f2204e64381c803d2859c83" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Jack Nguyen</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-119">
+			January 16, 2014 at 6:01 am</a>		</div>
+
+		<p>Hi Leon,</p>
+<p>Loved your tutorial. Learned a lot. I was messing around with the example in Understanding Binding. Not sure if you used ng-repeat mainly for example purposes but I messed around with the code and came up with</p>
+<p><code></code></p>
+<p>Should seem to work for as many people as there are in the list and it should always sync. Thanks and cleared up a lot.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=119#respond" onclick="return addComment.moveForm(&quot;div-comment-119&quot;, &quot;119&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-120">
+				<div id="div-comment-120" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/636b5fe02f2204e64381c803d2859c83" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Jack Nguyen</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-120">
+			January 16, 2014 at 6:02 am</a>		</div>
+
+		<p>Hi Leon,</p>
+<p>Loved your tutorial. Learned a lot. I was messing around with the example in Understanding Binding. Not sure if you used ng-repeat mainly for example purposes but I messed around with the code and came up with</p>
+<p>Should seem to work for as many people as there are in the list and it should always sync. Thanks and cleared up a lot. Also doesn’t seem your comment highlighting is working.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=120#respond" onclick="return addComment.moveForm(&quot;div-comment-120&quot;, &quot;120&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-121">
+				<div id="div-comment-121" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/55bf721ed671226e97b601d33fb2c319" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://www.alex-turok.com/" rel="external nofollow" class="url">Alex</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-121">
+			January 16, 2014 at 9:14 am</a>		</div>
+
+		<p>Leon, thanks for a great overview of the key capabilities of Angular.js! Although not familiar with the framework, I am sure that this tutorial is a great start allowing to grasp the spirit of ng and helping to decide where to go next.</p>
+<p>As a note, I see that you tried to keep things as simple as possible, but I also find that a saying a little more words on filtering (say, giving an example of how one can filter on the specific field – e.g. name) would be great. However, you may be right leaving that out of the scope of this post. Keep going!)</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=121#respond" onclick="return addComment.moveForm(&quot;div-comment-121&quot;, &quot;121&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-126">
+				<div id="div-comment-126" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/318da5b140f6fcba2a2e5f4098ef45d0" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://www.whiterabbitdesign.me/" rel="external nofollow" class="url">Francesco</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-126">
+			January 17, 2014 at 2:44 pm</a>		</div>
+
+		<p>Thanks a lot mate, your tutorial really helped me a lot on getting started with AngularJS</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=126#respond" onclick="return addComment.moveForm(&quot;div-comment-126&quot;, &quot;126&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-127">
+				<div id="div-comment-127" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/15221f27d435322137d1414b6676dbde" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://sa/" rel="external nofollow" class="url">Thinus</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-127">
+			January 19, 2014 at 3:11 pm</a>		</div>
+
+		<p>Very nice quick and easy tutorial. Thx! </p>
+<p>My first impression: Seems Angular achieves a lot more with less code compared to JQuery…</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=127#respond" onclick="return addComment.moveForm(&quot;div-comment-127&quot;, &quot;127&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-129">
+				<div id="div-comment-129" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/01826d2c8e9ee5dc9e40ca4bc88fbccd" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Chris</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-129">
+			January 27, 2014 at 8:27 pm</a>		</div>
+
+		<p>Great tutorial Leon. Nice base information to allow one to experiment on their own.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=129#respond" onclick="return addComment.moveForm(&quot;div-comment-129&quot;, &quot;129&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-130">
+				<div id="div-comment-130" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/b3beeb5a7ff97a4247b8e92806a708b0" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Vishnudas Tekale</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-130">
+			January 31, 2014 at 2:02 pm</a>		</div>
+
+		<p>Hello Leon Revill,</p>
+<p>This is really nice startup you have provided. Thanks for sharing.</p>
+<p>Can you share how we can have modular application with Angular? Also how it should use with big apps?</p>
+<p>Regards,<br>
+Vishnudas</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=130#respond" onclick="return addComment.moveForm(&quot;div-comment-130&quot;, &quot;130&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-137">
+				<div id="div-comment-137" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/ee3e03b7e1c02a66d1e5ca3289d03a6f" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Ravin Sharma</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-137">
+			February 5, 2014 at 10:40 am</a>		</div>
+
+		<p>Thank you. Your tutorial was very helpful.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=137#respond" onclick="return addComment.moveForm(&quot;div-comment-137&quot;, &quot;137&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-140">
+				<div id="div-comment-140" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/b642b4217b34b1e8d3bd915fc65c4452" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://google.com/" rel="external nofollow" class="url">Sam</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-140">
+			February 8, 2014 at 4:03 pm</a>		</div>
+
+		<p>Really Awesome. Keep it up with “Advance”</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=140#respond" onclick="return addComment.moveForm(&quot;div-comment-140&quot;, &quot;140&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-151">
+				<div id="div-comment-151" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/354e0e83615e35a13be5f7c8e6506270" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Deepak Lokare</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-151">
+			February 17, 2014 at 1:39 pm</a>		</div>
+
+		<p>Awesome..You kept everything as small and simple. Thank u</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=151#respond" onclick="return addComment.moveForm(&quot;div-comment-151&quot;, &quot;151&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-152">
+				<div id="div-comment-152" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/44952c1a487b50418788c3da766fb309" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://www.helenamoreno.com/" rel="external nofollow" class="url">Helena</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-152">
+			February 19, 2014 at 10:48 pm</a>		</div>
+
+		<p>Thank you for your tutorial Leon! Can’t wait for your next tutorials about AngularJS <img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/icon_wink.gif" alt=";)" class="wp-smiley"> </p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=152#respond" onclick="return addComment.moveForm(&quot;div-comment-152&quot;, &quot;152&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-156">
+				<div id="div-comment-156" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/86a7786cabc1823858570b5876085f6d" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://adrianperez.com/" rel="external nofollow" class="url">Adrián</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-156">
+			February 21, 2014 at 8:16 am</a>		</div>
+
+		<p>Really nice tut, thanks for share!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=156#respond" onclick="return addComment.moveForm(&quot;div-comment-156&quot;, &quot;156&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-162">
+				<div id="div-comment-162" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/66299ea2833ede4a9da5b5aa287a12bf" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">afzal hussain</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-162">
+			February 26, 2014 at 9:34 am</a>		</div>
+
+		<p>very useful tutorial Leon, keep up the good work!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=162#respond" onclick="return addComment.moveForm(&quot;div-comment-162&quot;, &quot;162&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-163">
+				<div id="div-comment-163" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/c4b085dc0c0f688b38822a13e1c071e5" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Ramanan</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-163">
+			February 27, 2014 at 5:37 am</a>		</div>
+
+		<p>Very Useful tutorial thanks you so much <img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=163#respond" onclick="return addComment.moveForm(&quot;div-comment-163&quot;, &quot;163&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-164">
+				<div id="div-comment-164" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/8579378c21fa2803be6f797b818dcab2" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Cesar</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-164">
+			February 28, 2014 at 2:29 am</a>		</div>
+
+		<p>Great tutorial! Thanks for sharing.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=164#respond" onclick="return addComment.moveForm(&quot;div-comment-164&quot;, &quot;164&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-165">
+				<div id="div-comment-165" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/43c7c4f69f82c7eaeae13080614b6bb8" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Premkumar</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-165">
+			March 1, 2014 at 6:07 pm</a>		</div>
+
+		<p>This tutorial helped me to get a grip on AngularJS. Please keep the good work going..</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=165#respond" onclick="return addComment.moveForm(&quot;div-comment-165&quot;, &quot;165&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-169">
+				<div id="div-comment-169" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/6afbfa839f0f5e1ae29d916c3b6568af" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">BB30</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-169">
+			March 8, 2014 at 1:54 am</a>		</div>
+
+		<p>Thanks for this, great intro to AngularJS! Really looking forward to more AngularJS tutorials from you!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=169#respond" onclick="return addComment.moveForm(&quot;div-comment-169&quot;, &quot;169&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-171">
+				<div id="div-comment-171" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/a213ec2e3095a14f6c3a14555d285ea4" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Jamil</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-171">
+			March 11, 2014 at 7:25 pm</a>		</div>
+
+		<p>I think this should be the default tutorial on the official Angular site. I’ve looked at three different ones so far, and most of them gloss over really important terms and such, leaving my head spinning. Where can I find the rest in the series? This was great.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=171#respond" onclick="return addComment.moveForm(&quot;div-comment-171&quot;, &quot;171&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-172">
+				<div id="div-comment-172" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/bfdface3510c102c22859fc7dab82e6a" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Sushant</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-172">
+			March 12, 2014 at 1:58 am</a>		</div>
+
+		<p>Thanks. It was a great tutorial. Keep us posted with more tutorials for angular js.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=172#respond" onclick="return addComment.moveForm(&quot;div-comment-172&quot;, &quot;172&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-174">
+				<div id="div-comment-174" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/f429e6b75799adbb34b5813331614a00" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">mcneela86</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-174">
+			March 12, 2014 at 4:44 am</a>		</div>
+
+		<p>This was really helpful, a fast intro to Angularjs. Looking forward to building on it.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=174#respond" onclick="return addComment.moveForm(&quot;div-comment-174&quot;, &quot;174&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-175">
+				<div id="div-comment-175" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/161c81533dbb02b32ec0a42153ccf428" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Moaz Tariq</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-175">
+			March 12, 2014 at 5:27 am</a>		</div>
+
+		<p>Great tutorial for beginners like me..</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=175#respond" onclick="return addComment.moveForm(&quot;div-comment-175&quot;, &quot;175&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-185">
+				<div id="div-comment-185" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/bd1f9de4d112ef68d276ccfaf43c3add" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Devdatta</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-185">
+			March 13, 2014 at 12:00 pm</a>		</div>
+
+		<p>Really nice one ! Thanks for sharing.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=185#respond" onclick="return addComment.moveForm(&quot;div-comment-185&quot;, &quot;185&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-201">
+				<div id="div-comment-201" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/6dd60e8de7b606e5e39919e5869eff6e" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://alfasin.com/" rel="external nofollow" class="url">Nir</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-201">
+			March 18, 2014 at 9:14 pm</a>		</div>
+
+		<p>Very nice walkthrough!<br>
+Thanks!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=201#respond" onclick="return addComment.moveForm(&quot;div-comment-201&quot;, &quot;201&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-202">
+				<div id="div-comment-202" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/3830b0bd24c34355ad33a327b6927c1a" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">paul</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-202">
+			March 19, 2014 at 11:31 am</a>		</div>
+
+		<p>Thank you, this has really piqued my interest in AngularJS, I am definitely going to learn more</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=202#respond" onclick="return addComment.moveForm(&quot;div-comment-202&quot;, &quot;202&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-203">
+				<div id="div-comment-203" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/1890a61d1ee51a39747ba051df408bda" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">bob</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-203">
+			March 20, 2014 at 4:15 pm</a>		</div>
+
+		<p>I am a true beginner to Java and more responsible to building a quality front end to a web app. My backend java developer wanted me to learn Angular to help him transition a legacy app. I cannot say I learned how to do this from your tutorial. That said, you give working examples to controllers and the simple use of an HTML file, js files and no need for a development IDE. If someone was very HTML5/CSS3 proficient, they may be able to produce the quality front end for an app using their skills and learning angular. Is there a way to use Netbeans and angular to produce a quality user interface?<br>
+Thanks,</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=203#respond" onclick="return addComment.moveForm(&quot;div-comment-203&quot;, &quot;203&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-223">
+				<div id="div-comment-223" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/f107c4fdfafd41bdeb37cb6b8d3d9896" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">varun</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-223">
+			March 23, 2014 at 12:07 pm</a>		</div>
+
+		<p>Very nice tutorial. Gave me a hang of what angular is all about . Wanted to start with something that takes less time and let’s me understand angular. And here I found it. Thanks a lot Leon</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=223#respond" onclick="return addComment.moveForm(&quot;div-comment-223&quot;, &quot;223&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-224">
+				<div id="div-comment-224" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/4f39bfb4dec8c41ef51360c95d502eb8" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://mytoursandtrips.com/" rel="external nofollow" class="url">Ramesh Kadirisani</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-224">
+			March 24, 2014 at 3:24 am</a>		</div>
+
+		<p>Leon,<br>
+Thanks for the tutorial. Sure, it triggers the interest in the readers!!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=224#respond" onclick="return addComment.moveForm(&quot;div-comment-224&quot;, &quot;224&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-225">
+				<div id="div-comment-225" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/94e88a2406f276347141ee50382f330c" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://michalbiernat.pl/" rel="external nofollow" class="url">mb</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-225">
+			March 24, 2014 at 1:24 pm</a>		</div>
+
+		<p>nice post, well explained</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=225#respond" onclick="return addComment.moveForm(&quot;div-comment-225&quot;, &quot;225&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-230">
+				<div id="div-comment-230" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/846729565af49fcce1be6277be032e1f" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Kalpesh Patel</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-230">
+			March 27, 2014 at 2:42 pm</a>		</div>
+
+		<p>Really nicely explained. It gave me initial boost to move ahead.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=230#respond" onclick="return addComment.moveForm(&quot;div-comment-230&quot;, &quot;230&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-233">
+				<div id="div-comment-233" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/13e614a1a3c553f46a054ed54bef31bb" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Kaja S</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-233">
+			March 29, 2014 at 1:31 pm</a>		</div>
+
+		<p>Nice tutorial , It’s very useful for beginner( me)…</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=233#respond" onclick="return addComment.moveForm(&quot;div-comment-233&quot;, &quot;233&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-234">
+				<div id="div-comment-234" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/0e61c19b78abae04230bcf29a7d3e8f5" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Khader</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-234">
+			March 29, 2014 at 6:59 pm</a>		</div>
+
+		<p>It’s great.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=234#respond" onclick="return addComment.moveForm(&quot;div-comment-234&quot;, &quot;234&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-235">
+				<div id="div-comment-235" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/0e61c19b78abae04230bcf29a7d3e8f5" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Khader</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-235">
+			March 29, 2014 at 7:01 pm</a>		</div>
+
+		<p>As i am a beginner. This tutorial gives me a strong basement on Angular JS. Thanks a lot for this Fantastic tutorial</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=235#respond" onclick="return addComment.moveForm(&quot;div-comment-235&quot;, &quot;235&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-238">
+				<div id="div-comment-238" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/616f6a736907101ec0b50b8a824b7946" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://careerbaba.in/" rel="external nofollow" class="url">Yasser</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-238">
+			April 2, 2014 at 9:41 am</a>		</div>
+
+		<p>Silly typo found: (opens a new tag) tag instead of tab. <img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=238#respond" onclick="return addComment.moveForm(&quot;div-comment-238&quot;, &quot;238&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		<ol class="children">
+		<li class="comment byuser comment-author-leon bypostauthor odd alt depth-2" id="comment-239">
+				<div id="div-comment-239" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/134293164c6542f37f000c36ba06096e" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Leon Revill</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-239">
+			April 2, 2014 at 10:09 am</a>		</div>
+
+		<p>Thanks Yasser <img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=239#respond" onclick="return addComment.moveForm(&quot;div-comment-239&quot;, &quot;239&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-240">
+				<div id="div-comment-240" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/0dfdcda9969e5ffeaf2de0e24ee46cea" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Vishal Patel</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-240">
+			April 2, 2014 at 12:24 pm</a>		</div>
+
+		<p>Nicely explained. I am much more impressed. Provide me your all material on Angular JS..Can you ??</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=240#respond" onclick="return addComment.moveForm(&quot;div-comment-240&quot;, &quot;240&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-241">
+				<div id="div-comment-241" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/48f98428402a91d66603486df482f163" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://olasideeq.blogspot.com/" rel="external nofollow" class="url">Olanrewaju</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-241">
+			April 2, 2014 at 1:44 pm</a>		</div>
+
+		<p>Thanks a lot for this Fantastic tutorial. It has really enlightened me.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=241#respond" onclick="return addComment.moveForm(&quot;div-comment-241&quot;, &quot;241&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-244">
+				<div id="div-comment-244" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/feb0734f53036164eda3c3ac859d9995" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Ruslan</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-244">
+			April 2, 2014 at 5:03 pm</a>		</div>
+
+		<p>Nice tutorial!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=244#respond" onclick="return addComment.moveForm(&quot;div-comment-244&quot;, &quot;244&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-246">
+				<div id="div-comment-246" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/22a523737cf876957462841432455474" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Praveen</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-246">
+			April 3, 2014 at 12:42 pm</a>		</div>
+
+		<p>Nice Tutorial … <img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=246#respond" onclick="return addComment.moveForm(&quot;div-comment-246&quot;, &quot;246&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-247">
+				<div id="div-comment-247" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/1c4a6f592f44e516bd9caf1e335d2bb0" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://www.swagat.tk/" rel="external nofollow" class="url">swagat</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-247">
+			April 3, 2014 at 2:25 pm</a>		</div>
+
+		<p>thank you so much….your tutorial is awesome for freshers like me…</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=247#respond" onclick="return addComment.moveForm(&quot;div-comment-247&quot;, &quot;247&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-248">
+				<div id="div-comment-248" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/1212d96f83b81915310f11e6ff00ffb5" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Jose</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-248">
+			April 3, 2014 at 9:31 pm</a>		</div>
+
+		<p>Hi!</p>
+<p>I’m just beginning working with AngularJS. This was one the most helpful tutorials I’ve ever come across while learning a new programming language or library. So, thank you very much for making this tutorial! I am now much more confident with my learning progress on AngularJS.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=248#respond" onclick="return addComment.moveForm(&quot;div-comment-248&quot;, &quot;248&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-251">
+				<div id="div-comment-251" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/1ecaf9548692f87b1ee38a0f759e9c8d" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://beta.databeat.net/" rel="external nofollow" class="url">sheel</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-251">
+			April 4, 2014 at 7:26 am</a>		</div>
+
+		<p>thanks a lot for this tutorial, it is easy, compact yet describing most useful features of angularJS</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=251#respond" onclick="return addComment.moveForm(&quot;div-comment-251&quot;, &quot;251&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-252">
+				<div id="div-comment-252" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/ff77d88676cb82b5ce007c05be0a0312" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://www.pitt.edu/~tas142/" rel="external nofollow" class="url">Tirath</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-252">
+			April 4, 2014 at 7:42 am</a>		</div>
+
+		<p>Thanks!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=252#respond" onclick="return addComment.moveForm(&quot;div-comment-252&quot;, &quot;252&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-254">
+				<div id="div-comment-254" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/bfb552ebafb13f088dc50297dfc2a545" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">dhanayan</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-254">
+			April 5, 2014 at 12:21 pm</a>		</div>
+
+		<p>Thanks leon..!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=254#respond" onclick="return addComment.moveForm(&quot;div-comment-254&quot;, &quot;254&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-259">
+				<div id="div-comment-259" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/8df9807c846ff9a2ccae54625e1e5ee1" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Sanjay</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-259">
+			April 7, 2014 at 1:00 pm</a>		</div>
+
+		<p>That’s really a great tutorial to start with…..Thanks a lot !!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=259#respond" onclick="return addComment.moveForm(&quot;div-comment-259&quot;, &quot;259&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-260">
+				<div id="div-comment-260" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/8be944ae1fcb7b55822f9ad171a3ef9d" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Praveen BS</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-260">
+			April 8, 2014 at 8:36 am</a>		</div>
+
+		<p>Hello Leon Revill,</p>
+<p>This tutorial really helped me a lot to start learning angualarjs.</p>
+<p> hope u’ll come up with more and more tutorial like this .<br>
+All the best &amp; Thanks bro .</p>
+<p>Regards,<br>
+Praveen</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=260#respond" onclick="return addComment.moveForm(&quot;div-comment-260&quot;, &quot;260&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-262">
+				<div id="div-comment-262" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/92ee6da2478bdaf1c4c0dae8b29646ff" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">srinivasarao</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-262">
+			April 8, 2014 at 7:43 pm</a>		</div>
+
+		<p>very nice and quick learning. really i know basic knowledge about AngularJS.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=262#respond" onclick="return addComment.moveForm(&quot;div-comment-262&quot;, &quot;262&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-264">
+				<div id="div-comment-264" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/7cad88a634fcc803af6a546198e35c13" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">simmi</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-264">
+			April 9, 2014 at 1:06 pm</a>		</div>
+
+		<p>Great tutorial with very nice Explanation , Thanks !!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=264#respond" onclick="return addComment.moveForm(&quot;div-comment-264&quot;, &quot;264&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-269">
+				<div id="div-comment-269" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/4d9449b4643473d7fba59de8a88f72d6" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Jeffrey</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-269">
+			April 11, 2014 at 5:16 am</a>		</div>
+
+		<p>Helpful tutorial. Thank you.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=269#respond" onclick="return addComment.moveForm(&quot;div-comment-269&quot;, &quot;269&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-273">
+				<div id="div-comment-273" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/5793e3b4b95738222e17724564f3d414" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://www.freakzion.com/" rel="external nofollow" class="url">Sepelka</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-273">
+			April 13, 2014 at 7:14 pm</a>		</div>
+
+		<p>Leon, Nice tutorial!!. AngularJS is really incredible when you learn how to use it!. I am also writing one so in case you want to take a look: <a href="http://whazinit.com/676ryy0b8" rel="nofollow">http://whazinit.com/676ryy0b8</a></p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=273#respond" onclick="return addComment.moveForm(&quot;div-comment-273&quot;, &quot;273&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-274">
+				<div id="div-comment-274" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/bb83113cb89e5db26747ccc537c303b9" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Kapil</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-274">
+			April 14, 2014 at 3:04 pm</a>		</div>
+
+		<p>Hi Revill, Thanks for this tutorial.<br>
+I was having a concern that when we filter
+</p><pre>searchText</pre>
+<p> textbox, some labels are not filtered even if a letter doesn’t match!!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=274#respond" onclick="return addComment.moveForm(&quot;div-comment-274&quot;, &quot;274&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-276">
+				<div id="div-comment-276" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/43e467d2603dc9d45245306c587d1d0a" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Lovelina</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-276">
+			April 15, 2014 at 2:46 pm</a>		</div>
+
+		<p>This tutorials is a superb one for quick start on Angular JS<br>
+Hoping to see many more tutorials and examples like this.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=276#respond" onclick="return addComment.moveForm(&quot;div-comment-276&quot;, &quot;276&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-278">
+				<div id="div-comment-278" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/f44e844227ecb083a274270af10f0217" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://www.racehorseuniversity.com/" rel="external nofollow" class="url">Pete</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-278">
+			April 16, 2014 at 3:34 am</a>		</div>
+
+		<p>Hi Leon,<br>
+Thanks for the tutorial. It was a lot of help. Your the man!<br>
+Hope your going to be writing more tutorials. <img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=278#respond" onclick="return addComment.moveForm(&quot;div-comment-278&quot;, &quot;278&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-280">
+				<div id="div-comment-280" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/cdea6b80e56770b282d629d892f6529e" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Jeff English</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-280">
+			April 16, 2014 at 3:52 pm</a>		</div>
+
+		<p>Excellent intro tutorial — just what I needed. Thanks!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=280#respond" onclick="return addComment.moveForm(&quot;div-comment-280&quot;, &quot;280&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-281">
+				<div id="div-comment-281" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/65cc45c65e3b870d6b81e8ac91e47eed" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://kaixinzhuan.tk/" rel="external nofollow" class="url">kaixinzhuan</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-281">
+			April 17, 2014 at 3:51 am</a>		</div>
+
+		<p>great tutorial, thanks</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=281#respond" onclick="return addComment.moveForm(&quot;div-comment-281&quot;, &quot;281&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-284">
+				<div id="div-comment-284" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/4647cca419038b4983412d53e0327e1d" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">suram</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-284">
+			April 17, 2014 at 10:49 am</a>		</div>
+
+		<p>Nice tutorial for the beginners. Thanks for sharing.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=284#respond" onclick="return addComment.moveForm(&quot;div-comment-284&quot;, &quot;284&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-296">
+				<div id="div-comment-296" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/7ae5febaa48a842cbb6fd3a662461d75" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn"><a href="http://mangemyhealth/" rel="external nofollow" class="url">jaishankar</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-296">
+			April 21, 2014 at 11:03 am</a>		</div>
+
+		<p>Awesome Tutorial lenon. A good start for Angular js beginners</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=296#respond" onclick="return addComment.moveForm(&quot;div-comment-296&quot;, &quot;296&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-297">
+				<div id="div-comment-297" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/cb7dd13ac8db09a4e32e4e294c919cc3" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">anubhav</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-297">
+			April 21, 2014 at 12:26 pm</a>		</div>
+
+		<p>Very nice leon, Thanks for sharing ..</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=297#respond" onclick="return addComment.moveForm(&quot;div-comment-297&quot;, &quot;297&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-300">
+				<div id="div-comment-300" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/d32dc352ceed200d3ffffd546cbbfd5b" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Ali</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-300">
+			April 23, 2014 at 5:56 am</a>		</div>
+
+		<p>Great tutorial, Thanks.</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=300#respond" onclick="return addComment.moveForm(&quot;div-comment-300&quot;, &quot;300&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-306">
+				<div id="div-comment-306" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/50e9a2dff30c3cf702dda426b1713da0" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Konjoh Elvis</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-306">
+			April 24, 2014 at 9:39 am</a>		</div>
+
+		<p>Nice Tutorial i really enjoy it . It helps me starting with AngularJs.<br>
+Thanks!!!!!</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=306#respond" onclick="return addComment.moveForm(&quot;div-comment-306&quot;, &quot;306&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-308">
+				<div id="div-comment-308" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/e67425266e7cf668169384080d92acde" class="avatar avatar-120 photo" height="120" width="120">			<cite class="fn">Arvind</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#comment-308">
+			April 24, 2014 at 1:46 pm</a>		</div>
+
+		<p>Thanks ! Good Job</p>
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/?replytocom=308#respond" onclick="return addComment.moveForm(&quot;div-comment-308&quot;, &quot;308&quot;, &quot;respond&quot;, &quot;16&quot;)">Reply</a>		</div>
+				</div>
+		</li><!-- #comment-## -->
+        </ol><!-- .comment-list -->
+                        								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title"><i class="icon-bubbles2"></i> HAVE YOUR SAY <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.revillweb.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30"></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p><p class="comment-form-captcha">
+    <span class="eazycfc_captcha-exercise">
+    <label for="eazycfc_captcha">
+      31 +       <span class="eazycfc-hide">53</span>
+      <span class="eazycfc-hide"> - </span>
+      8 =
+    </label>
+    <input type="text" name="eazycfc_captcha" id="eazycfc_captcha">
+    <input type="hidden" name="eazycfc_captcha_sol" id="eazycfc_captcha_sol" value="">
+  </span>
+</p>						<i class="icon-checkmark-circle"></i> You may highlight code within comments: <span class="inline-code">&lt;pre&gt;&lt;code&gt;&lt;?php echo 'Your Code!'; ?&gt;&lt;/code&gt;&lt;/pre&gt;</span>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Post Comment">
+							<input type="hidden" name="comment_post_ID" value="16" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+											</form>
+							</div><!-- #respond -->
+			</div><!-- #comments -->        </div>
+        <div class="clearfix"></div>
+    </footer>
+</article><!-- #post -->
+					</div><!-- #content -->
+	</div><!-- #primary -->
+            </div> <!-- .content-left -->
+            <div class="content-right">
+                <div id="right-panel">
+                  <link rel="stylesheet" id="post-list-css" href="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/subscribe-widget.css" type="text/css" media="all">
+            <div class="subscribe-widget">
+                <h2>Subscribe</h2>
+                <p>Leave your e-mail to receive irregular tech news, development insights and recommended articles &amp; tutorials.</p>
+                <input type="text" name="subscribe-email" class="search-form-input text subscribe-email">
+                <div class="actions">
+                    <div class="widget-error"></div>
+                    <button class="subscribe-btn rev-btn subscr1be-btn">Subscribe</button>
+                </div>
+            </div>            <h2>Search</h2>
+                <form class="search-form" method="GET" action="http://www.revillweb.com/">
+                    <fieldset>
+                        <input type="text" id="search-input-sidebar" class="search-form-input text" name="s">
+                        <input type="submit" value="Go" class="submit search-button">
+                    </fieldset>
+                </form>
+            </div><h2>Tutorials</h2><ul><li><a href="http://www.revillweb.com/tutorials">All <div class="circle-small"></div></a></li><li><a href="http://www.revillweb.com/tutorial_categories/css-tutorials">CSS <div class="circle-small" style="background-color: #FF4500;"></div></a></li><li><a href="http://www.revillweb.com/tutorial_categories/html-tutorials">HTML <div class="circle-small" style="background-color: #43B3DC;"></div></a></li><li><a href="http://www.revillweb.com/tutorial_categories/javascript-tutorials">JavaScript <div class="circle-small" style="background-color: #44DC43;"></div></a></li><li><a href="http://www.revillweb.com/tutorial_categories/php-tutorials">PHP <div class="circle-small" style="background-color: #FF4E4E;"></div></a></li></ul><h2>Articles</h2><ul><li><a href="http://www.revillweb.com/articles">All <div class="circle-small"></div></a></li><li><a href="http://www.revillweb.com/article_categories/web-design-articles">Web Design <div class="circle-small" style="background-color: #7BD736;"></div></a></li><li><a href="http://www.revillweb.com/article_categories/web-development-articles">Web Development <div class="circle-small" style="background-color: #33CC78;"></div></a></li></ul>            <style>
+                .rev-social-box {
+                    margin: 20px -20px 0 -20px;
+                    text-align: center;
+                    width: 290px;
+                    height: 110px;
+                    padding-top: 5px;
+                    background-color: #373737;
+                    position: relative;
+                }
+                .sticky {
+                   position: fixed;
+                    top: 0;
+                }
+                .rev-social-box .top-bottom-buttons {
+                    margin-top: 10px;
+                    background-color: #252525;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+                .rev-social-box .top-bottom-buttons a {
+                    display: inline-block;
+                    color: #FFF;
+                    text-decoration: none;
+                    padding: 0 10px 0 10px;
+                    line-height: 30px;
+                }
+                .rev-social-box .top-bottom-buttons a:hover {
+                    background-color: #3c3c3c;
+                }
+            </style>
+            <script>
+            var importantOrigin = {};
+            $(function(){
+                importantOrigin = $('.important').offset();
+                $(window).scroll(function(){
+                    sticky();
+                });
+            });
+            function sticky() {
+                var _important = $('.important');
+                var scrollPosition = $('body').scrollTop();
+                if (importantOrigin.top < scrollPosition) {
+                    _important.addClass("sticky");
+                } else {
+                    _important.removeClass("sticky");
+                }
+            }
+            </script>
+            <script type="text/javascript" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/buttons.js"></script>
+            <script type="text/javascript">stLight.options({publisher: "6ff0fb09-9a88-480b-95cb-58ba82d4d949", doNotHash: true, doNotCopy: false, hashAddressBar: false});</script>
+            <div class="rev-social-box important sticky">
+                <div class="socials">
+                    <span class="st_fblike_vcount" displaytext="Facebook Like" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;position:relative;margin:3px 3px 0;padding:0px;font-size:11px;line-height:0px;vertical-align:bottom;overflow:visible;"><div data-action="" data-send="false" data-layout="box_count" data-show-faces="false" class="fb-like fb_iframe_widget" data-href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;href=http%3A%2F%2Fwww.revillweb.com%2Ftutorials%2Fangularjs-in-30-minutes-angularjs-tutorial%2F&amp;layout=box_count&amp;locale=en_GB&amp;sdk=joey&amp;send=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 47px; height: 61px;"><iframe name="f4c379ec4" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/like.html" class="" style="border: none; visibility: visible; width: 47px; height: 61px;"></iframe></span></div></span></span>
+                    <span class="st_plusone_vcount" displaytext="Google +1" st_processed="yes"><div style="display:inline-block;overflow:hidden;line-height:0px;vertical-align:bottom;width:55px; height:61px;">&nbsp;<g:plusone href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/" size="tall" callback="plusoneCallback"></g:plusone></div></span>
+                    <span class="st_twitter_vcount" displaytext="Tweet" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><div><div class="stBubble" style="display: block;"><div class="stBubble_count">234</div></div><span class="stMainServices st-twitter-counter" style="background-image: url(http://w.sharethis.com/images/twitter_counter.png);">&nbsp;<img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/check-big.png" style="position: absolute; top: -7px; right: -7px; width: 19px; height: 19px; max-width: 19px; max-height: 19px; display: none;"></span></div></span></span>
+                    <span class="st_dzone_vcount" displaytext="DZone" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><div><div class="stBubble" style="display: block;"><div class="stBubble_count">44</div></div><span class="stButton_gradient"><span class="chicklets dzone">DZone</span><img src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/check-big.png" style="position: absolute; top: -7px; right: -7px; width: 19px; height: 19px; max-width: 19px; max-height: 19px; display: none;"></span></div></span></span>
+                    <div class="top-bottom-buttons">
+                        <a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#header"><i class="icon-arrow-up"></i> TOP</a>
+                        <a href="http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/#footer"><i class="icon-arrow-down"></i> BOTTOM</a>
+                    </div>
+                </div>
+                <div class="bsa-ad">
+                    <!-- BuySellAds Zone Code -->
+                    <div id="bsap_1294851" class="bsarocks bsap_aec59de40f7d5cde8f54ec02e1e9fa72"></div>
+                    <!-- End BuySellAds Zone Code -->
+                </div>
+            </div>    <div class="sidebar-cat">
+        <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- RevillWeb Sidebar -->
+        <ins class="adsbygoogle" style="display:inline-block;width:250px;height:250px" data-ad-client="ca-pub-2778019522593933" data-ad-slot="9295177552"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</div>            </div>
+		</div> <!-- .content-block -->
+	 <!-- .main-frame -->
+    <div class="footer" id="footer">
+        <div class="rev-container">
+            <div class="section">
+                <h2><i class="icon-tags"></i> Hot Topics</h2>
+                <ul class="tag-list"><li style="font-size: 15px;"><a href="http://www.revillweb.com/?s=AngularJS">AngularJS</a></li><li style="font-size: 10px;"><a href="http://www.revillweb.com/?s=bootstrap">bootstrap</a></li><li style="font-size: 10px;"><a href="http://www.revillweb.com/?s=bootstrap%20tutorial">bootstrap tutorial</a></li><li style="font-size: 10px;"><a href="http://www.revillweb.com/?s=CodeIgniter">CodeIgniter</a></li><li style="font-size: 10px;"><a href="http://www.revillweb.com/?s=Competition">Competition</a></li><li style="font-size: 10px;"><a href="http://www.revillweb.com/?s=copy%20&%20paste">copy &amp; paste</a></li><li style="font-size: 15px;"><a href="http://www.revillweb.com/?s=Framework">Framework</a></li><li style="font-size: 10px;"><a href="http://www.revillweb.com/?s=Frameworks%20for%202014">Frameworks for 2014</a></li><li style="font-size: 10px;"><a href="http://www.revillweb.com/?s=Free%20Ebook">Free Ebook</a></li><li style="font-size: 15px;"><a href="http://www.revillweb.com/?s=JavaScript">JavaScript</a></li><li style="font-size: 10px;"><a href="http://www.revillweb.com/?s=JavaScript%20tips">JavaScript tips</a></li><li style="font-size: 15px;"><a href="http://www.revillweb.com/?s=jQuery">jQuery</a></li><li style="font-size: 15px;"><a href="http://www.revillweb.com/?s=PHP%20Tips">PHP Tips</a></li><li style="font-size: 10px;"><a href="http://www.revillweb.com/?s=Recommended%20Book">Recommended Book</a></li><li style="font-size: 15px;"><a href="http://www.revillweb.com/?s=Responsive%20Design">Responsive Design</a></li><li style="font-size: 10px;"><a href="http://www.revillweb.com/?s=Twitter%20Bootstrap">Twitter Bootstrap</a></li></ul>            </div>
+            <div class="section">
+                <h2><i class="icon-heart7"></i> Popular Content</h2>
+                <ul class="popular-content"><li><a href="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb.html">AngularJS Tutorial - Learn AngularJS in 30 minutes <div class="post-type-badge type-tutorial">TUTORIAL</div></a></li><li><a href="http://www.revillweb.com/tutorials/super-useful-javascript-functions/">Super useful JavaScript functions <div class="post-type-badge type-tutorial">TUTORIAL</div></a></li><li><a href="http://www.revillweb.com/tutorials/codeigniter-tutorial-learn-codeigniter-in-40-minutes/">CodeIgniter Tutorial - Learn CodeIgniter in 40 minutes  <div class="post-type-badge type-tutorial">TUTORIAL</div></a></li><li><a href="http://www.revillweb.com/tutorials/php-ternary-operator-php-inline-if/">PHP Ternary Operator / PHP Inline IF <div class="post-type-badge type-tutorial">TUTORIAL</div></a></li><li><a href="http://www.revillweb.com/articles/why-use-json/">Why use JSON? - 3 Reasons why you should use JSON <div class="post-type-badge type-article">ARTICLE</div></a></li></ul>            </div>
+            <div class="section">
+                <h2><i class="icon-lamp3"></i> RevillWeb</h2>
+                <div class="footer-social">
+                    <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/follow_button.1397165098(1).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 158px; height: 20px;"></iframe>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    <!-- Place this tag where you want the widget to render. -->
+                    <div id="___follow_1" style="position: absolute; width: 450px; left: -10000px;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position:absolute;top:-10000px;width:450px;margin:0px;border-style:none" tabindex="0" vspace="0" width="100%" id="I1_1398364990983" name="I1_1398364990983" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/saved_resource.html"></iframe></div><div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/113128976126646245587" data-rel="publisher" data-gapiscan="true" data-onload="true" data-gapistub="true"></div>
+                    <!-- Place this tag after the last widget tag. -->
+                    <script type="text/javascript">
+                        (function() {
+                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                            po.src = 'https://apis.google.com/js/platform.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                        })();
+                    </script>
+                    <div class="fb-follow fb_iframe_widget" data-href="https://www.facebook.com/pages/Revillweb/264778196907648" data-colorscheme="dark" data-layout="button_count" data-show-faces="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=dark&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FRevillweb%2F264778196907648&amp;layout=button_count&amp;locale=en_GB&amp;sdk=joey&amp;show_faces=false"><span style="vertical-align: bottom; width: 90px; height: 20px;"><iframe name="f1f071e68" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:follow Facebook Social Plugin" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/follow.html" class="" style="border: none; visibility: visible; width: 90px; height: 20px;"></iframe></span></div>
+                </div>
+                <ul>
+                    <li><a href="http://www.revillweb.com/write-for-us/">Write for us</a></li>
+                    <li><a href="http://www.revillweb.com/terms-conditions/">Terms &amp; Conditions</a></li>
+                    <li>Copyright © www.revillweb.com 2013-2014</li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <script type="text/javascript">
+/* <![CDATA[ */
+var ajax_var_1 = {"ajax_url":"http:\/\/www.revillweb.com\/wp-admin\/admin-ajax.php","nonce":"ec3f0eca9e"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/subscr1be.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajax_var_2 = {"url":"http:\/\/www.revillweb.com\/wp-admin\/admin-ajax.php","nonce":"512f7ced8a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/rate-post.js"></script>
+
+<iframe id="stSegmentFrame" name="stSegmentFrame" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/getSegment.html" frameborder="0" scrolling="no" width="0px" height="0px" style="display:none;"></iframe><div id="stwrapper" class="stwrapper" style="visibility: hidden; top: -999px; left: -999px;"><div class="stclose"></div><iframe allowtransparency="true" id="stLframe" class="stLframe" name="stLframe" frameborder="0" scrolling="no" width="353px" height="350px" src="./AngularJS Tutorial – Learn AngularJS in 30 minutes   RevillWeb_files/index.2bc961db2b80add11bfbd2c8a24f6ba1.html" style="top: 0px; left: 0px;"></iframe></div><div id="fb-root"></div></body></html>

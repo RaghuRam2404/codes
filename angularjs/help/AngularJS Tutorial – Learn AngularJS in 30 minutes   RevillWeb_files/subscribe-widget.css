@@ -1,0 +1,34 @@
+.subscribe-widget {
+    margin: -20px -20px 10px -20px;
+    background-color: #373737;
+    padding: 20px;
+}
+.subscribe-widget .subscribe-email {
+    background-color: #474747;
+    border: solid 2px #373737;
+}
+.subscribe-widget p {
+    color: #CCC;
+    margin: 0 0 10px 0;
+    font-size: 12px;
+}
+.subscribe-widget .actions {
+    text-align: right;
+    margin-top: 10px;
+    position: relative;
+}
+.subscribe-widget .actions .widget-error {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 100px;
+    bottom: 0;
+    color: red;
+    line-height: 15px;
+}
+.subscribe-widget .actions .widget-error.success {
+    color: #FFF;
+}
+.subscribe-widget .subscribe-email.error {
+    border: solid 2px red;
+}

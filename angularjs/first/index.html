@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Learning Angular JS</title>
+	<script type="text/javascript" src="./angular js lib/angular.js" ></script>
+	<script type="text/javascript" src="./js/app.js" ></script>
+	<script type="text/javascript" src="./js/mainController.js" ></script>
+</head>
+
+<body>
+	<div id='content' ng-app='myAngApp' ng-controller='MainController' >
+		{{understand}} <br />
+		<input type="text" ng-model='inputvalue' />
+		<div>
+			input value of the text box : {{inputvalue}}
+		</div>
+	</div>
+</body>
+
+</html>

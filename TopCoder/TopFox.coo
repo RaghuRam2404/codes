@@ -1,0 +1,13 @@
+// author : raghuram2404
+// 
+// accepted for
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class TopFox{};
+
+int main(){
+
+	return 0;
+}

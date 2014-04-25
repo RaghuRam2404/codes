@@ -1,0 +1,40 @@
+.categories {
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+.categories li {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 25px;
+    padding: 5px;
+    line-height: 35px;
+    margin: 0 0 5px 5px;
+    text-align: center;
+    color: #FFF;
+}
+.categories li.alt {
+    width: inherit;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px 0 10px;
+}
+.categories li a {
+    height: 44px;
+    width: 45px;
+    line-height: 44px;
+    margin: -5px 0 0 -5px;
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+}
+.categories li a.alt {
+    width: inherit;
+    height: 35px;
+    line-height: 35px;
+    margin: 0;
+}
