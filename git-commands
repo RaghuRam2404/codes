@@ -1,0 +1,6 @@
+git clone https://github.com/RaghuRam2404/codes.git
+git init - to initialize a new repository in local 
+git commit -m "message" - new message and make a commit
+git push origin master - push to the remote repository
+git pull origin master - pull
+
