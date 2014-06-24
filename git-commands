@@ -1,3 +1,5 @@
+export http_proxy=
+export https_proxy=
 git clone https://github.com/RaghuRam2404/codes.git
 git init - to initialize a new repository in local 
 git commit -m "message" - new message and make a commit
