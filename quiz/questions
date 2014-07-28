@@ -1,0 +1,8 @@
+1. Draw a rectangle (with only outline)
+2. Draw a rhombus, like kite shape (with only outline) NOTE: use only two loop structures
+3. Fill the rectangle
+4. Fill the rhombus
+5. Draw the boundary across
+6. Find the overlapping figures of a particular one
+7. Delete all the overlapping ones of a particular one
+8. Remove all the overlapping figures from a given point

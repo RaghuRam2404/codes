@@ -1,0 +1,100 @@
+Enter the details of the image
+Height : Width : Enter the left top corner x : Enter the left top corner y : Enter the widht of the rectangle : Enter the height of the rectangle : Enter the center x : Enter the center y : Enter the length : Enter the left top corner x : Enter the left top corner y : Enter the widht of the rectangle : Enter the height of the rectangle : Enter the center x : Enter the center y : Enter the length : Enter the center x : Enter the center y : Enter the length : Enter the left top corner x : Enter the left top corner y : Enter the widht of the rectangle : Enter the height of the rectangle : Enter the left top corner x : Enter the left top corner y : Enter the widht of the rectangle : Enter the height of the rectangle : 
+|   +-+                                 
+|   |G|                                 
+|+--+-+---+                             
+||GGGG++GG|                             
+||GGG/++GG|                             
+||GG/PPP\G|                             
+|+-/PPPPP\+                             
+|   \PPP/                               
+|    \P/                                
+|     x       x                         
+|            /P\                        
+|           /PPP\                       
+|          /PPPPP\                      
+|         /PPPPPPP\                     
+|        /PPPPPPPPP\                    
+|         \PPPPPPP/                     
+|          \PPPPP/                      
+|           \PPP/                       
+|            \P/                        
+|             x                         
+|                                       
+|                                       
+|                                       
+|                                       
+|                                 +-----
+|                            x    |GGGGG
+|                           /P\   |GGGGG
+|                          /PPP\  |GGGGG
+|                         /PPPPP\ |GGGGG
+|                        /PPPPPPP\|GGGGG
+|                         \PPPPP/ |GGGGG
+|                          \PPP/  |GGGGG
+|                           \P/   |GGGGG
+|                            x    +-----
++---------------------------------------
+                                        
+                                        
+                                        
+                                        
+                                        
+
+0 RECTANGLE : x-2 y-3 width-10 height-5 borderColor-B fillColor-G
+1 KITE : x-7 y-7 length-3 borderColor-B fillColor-P
+2 RECTANGLE : x-35 y-25 width-10 height-10 borderColor-B fillColor-G
+3 KITE : x-15 y-15 length-5 borderColor-B fillColor-P
+4 KITE : x-30 y-30 length-4 borderColor-B fillColor-P
+5 RECTANGLE : x-7 y-4 width-2 height-2 borderColor-B fillColor-G
+6 RECTANGLE : x-5 y-1 width-3 height-3 borderColor-B fillColor-G
+
+Overlapping figure for 0 : 1 5 6 
+Overlapping figure for 1 : 0 5 
+Overlapping figure for 2 : 
+Overlapping figure for 3 : 
+Overlapping figure for 4 : 
+Overlapping figure for 5 : 0 1 
+Overlapping figure for 6 : 0 
+No of deletions to be performed on the board : 
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+        +-------------------------+     
+        |     x                   |     
+        |    /P\                  |     
+        |   /PPP\                 |     
+        |  /PPPPP\                |     
+        | /PPPPPPP\               |     
+        |/PPPPPPPPP\              |     
+        | \PPPPPPP/               |     
+        |  \PPPPP/                |     
+        |   \PPP/                 |     
+        |    \P/                  |     
+        |     x                   |     
+        |                         |     
+        |                         |     
+        |                         |     
+        |                         |     
+        |                         |     
+        |                    x    |     
+        |                   /P\   |     
+        |                  /PPP\  |     
+        |                 /PPPPP\ |     
+        |                /PPPPPPP\|     
+        |                 \PPPPP/ |     
+        |                  \PPP/  |     
+        |                   \P/   |     
+        |                    x    |     
+        +-------------------------+     
+                                        
+                                        
+                                        
+                                        
+                                        
+
