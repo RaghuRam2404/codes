@@ -281,7 +281,7 @@ void getAndPrintRectangle(){
 	scanf("%d", &y);
 	printf("Enter the widht of the rectangle : "); scanf("%d", &width);
 	printf("Enter the height of the rectangle : "); scanf("%d", &height);
-	drawRectangle(x,y,width, height, 'B', 'G');
+	drawRectangle(x,y,width, height, 'B', 'P');
 }
 
 void getAndPrintKite(){
@@ -291,7 +291,7 @@ void getAndPrintKite(){
 	printf("Enter the center y : ");
 	scanf("%d", &y);
 	printf("Enter the length : "); scanf("%d", &length);
-	drawKite(x,y,length, 'B', 'P');
+	drawKite(x,y,length, 'B', ' ');
 }
 
 int main(){

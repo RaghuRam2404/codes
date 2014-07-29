@@ -123,35 +123,75 @@ int checkRange(int i, int j){
 	return 0;
 }
 
+int next(int count){
+	if(count <= 8) return count+1;
+	return 1;
+}
+
 // draw or erase a rectangle
 void drawRectangle(int x, int y, int width, int height, char borderColor, char fillColor, int divisibility){
-	int i,j,col1,col2,col3;
+	int i,j,x1,x2,y1,y2,count=1;
 	char bg = d.backgroundColor;
 	if(borderColor != bg)
 		logFig[figCount].isPresent = 1;
 	else
 		logFig[figCount].isPresent = 0;
+	/**/
+	for(i=x, j=y; j<=height+y-1; j++){
+		if(!checkRange(i,j)) continue;
+		setPixels(i,j,'0'+count);
+		count = next(count);
+	}
+	
+	for(i=x+1, j=y+height-1; i<=x+width-1; i++){
+		if(!checkRange(i,j)) continue;
+		setPixels(i,j,'0'+count);
+		count = next(count);
+	}
+
+	for(i=x+width-1, j=y+height-2; j>=y; j--){
+		if(!checkRange(i,j)) continue;
+		setPixels(i,j,'0'+count);
+		count = next(count);
+	}
+	
+	for(i=x+width-2, j=y; i>x; i--){
+		if(!checkRange(i,j)) continue;
+		setPixels(i,j,'0'+count);
+		count = next(count);
+	}
+
+
 	for(i=x; i<width+x; i++){
 		for(j=y; j<height+y; j++){
 			if(!checkRange(i,j)) continue;
 			if(i==x && j==y){ 
-				setPixels(i,j,'1');
+				//setPixels(i,j,'1');
 			}else if((i==x+width-1&&j==y+height-1)){
-				setPixels(i,j,'0'+width);
+				//setPixels(i,j,'0'+width);
 			}else if((i==x && j==y+height-1)){
-				setPixels(i,j,'0'+height);
+				//setPixels(i,j,'0'+height);
 			}else if((j==y && i==x+width-1)){
-				setPixels(i,j,'0'+width);
+				//setPixels(i,j,'0'+width);
 			}else if(i==x || i==x+width-1){
-				if(i==x) setPixels(i,j, (j-y+1)+'0');
-				else setPixels(i,j,height-(j-y+1)+'0'+1);
-			}else if(j==y || j==y+height-1) setPixels(i,j,i-x+1+'0');
-			else{
-				col1 = (j-y+1);
-				col2 = height-(j-y+1)+1;
-				col3 = i-x+1;
-				if((col3%3==0 && col1%3==0) || (col3%3==0&&col2%3==0)){
-					setPixels(i,j,'3');
+				//if(i==x) setPixels(i,j, (j-y+1)+'0');
+				//else setPixels(i,j,height-(j-y+1)+'0'+1);
+			}else if(j==y || j==y+height-1){
+				//setPixels(i,j,i-x+1+'0');
+			}else{
+				// original values
+				//x1 = d.pixels[i][y];
+				//x2 = d.pixels[i][y+height-1];
+				//y1 = d.pixels[x][j];
+				//y2 = d.pixels[x+width-1][j];
+				x1 = y1 = x2 = y2 = -1;
+				if(checkRange(i,y)) x1 = d.pixels[y-1][i-1];
+				if(checkRange(i,y+height-1)) x2 = d.pixels[y+height-2][i-1];
+				if(checkRange(x,j)) y1 = d.pixels[j-1][x-1];
+				if(checkRange(x+width-1,j)) y2 = d.pixels[j-1][x+width-2];
+
+				if((x1%divisibility==0 && y1%divisibility==0) || (x1%divisibility==0 && y2%divisibility==0) || (x2%divisibility==0 && y1%divisibility==0) || (x2%divisibility==0 && y2%divisibility==0)){
+					setPixels(i,j,'0'+divisibility);
 				}else
 					setPixels(i,j,fillColor);
 			}
@@ -321,7 +361,7 @@ int main(){
 	scanf("%d", &y);
 	printf("Enter the widht of the rectangle : "); scanf("%d", &width);
 	printf("Enter the height of the rectangle : "); scanf("%d", &height);
-	printf("Enter the divisibility number : ", &divisibility);
+	printf("Enter the divisibility number : "); scanf("%d", &divisibility);
 	drawRectangle(x,y,width, height, 'B', ' ',divisibility);
 	printBoard();
 }

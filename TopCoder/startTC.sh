@@ -1,0 +1,1 @@
+javaws -Xnosplash ./ContestAppletProd.jnlp
