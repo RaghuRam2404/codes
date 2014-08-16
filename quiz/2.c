@@ -36,7 +36,7 @@ void allocatePixels(){
 	}
 	for (i=0; i<d.height; i++)
 		for(j=0; j<d.width; j++)
-			d.pixels[i][j] = d.backgroundColor, d.overlapCount[i][j]=0, d.data[i][j] = malloc(sizeof(struct node));
+				d.pixels[i][j] = d.backgroundColor, d.overlapCount[i][j]=0, d.data[i][j] = malloc(sizeof(struct node));
 }
 
 // adding the log while inserting a new figure into the board
@@ -180,6 +180,9 @@ void printBoard(){
 	printf("\n");
 	for(i=0; i<d.height; i++){
 		for(j=0; j<d.width; j++){
+			if((i==0 || i==d.height-1 || j==0 || j==d.width-1) && d.overlapCount[i][j]==0){
+				printf("*");
+			}else
 			printf("%c", d.pixels[i][j]);
 		}
 		printf("\n");
@@ -291,7 +294,7 @@ void printBoardWithBoundary(){
 
 int main(){
 	int x, y, length;
-	freopen("input2.in", "r", stdin);
+	//freopen("input2.in", "r", stdin);
 	//freopen("output2.out", "w", stdout);
 	printf("Enter the details of the image\n");
 	printf("Height : ");

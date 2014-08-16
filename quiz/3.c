@@ -25,7 +25,7 @@ int figCount = 0, RECT=1, KITE=2, toRemove=-1;
 // initialize
 void allocatePixels(){
 	int i,j;
-	d.backgroundColor = '.';
+	d.backgroundColor = ' ';
 	d.pixels = malloc(d.height*(sizeof(char*)));
 	d.overlapCount = malloc(d.height*sizeof(int*));
 	d.data = malloc(d.height*sizeof(struct node));
@@ -35,8 +35,9 @@ void allocatePixels(){
 		d.data[i] = malloc(d.width*sizeof(struct node));
 	}
 	for (i=0; i<d.height; i++)
-		for(j=0; j<d.width; j++)
-			d.pixels[i][j] = d.backgroundColor, d.overlapCount[i][j]=0, d.data[i][j] = malloc(sizeof(struct node));
+		for(j=0; j<d.width; j++){
+				d.pixels[i][j] = d.backgroundColor, d.overlapCount[i][j]=0, d.data[i][j] = malloc(sizeof(struct node));
+		}
 }
 
 // adding the log while inserting a new figure into the board
@@ -56,7 +57,7 @@ void addlogFig(int type, int x, int y, int width, int height, int length, char b
 void checkAndAddOverlapData(int x, int y){
 	int present = 0;
 	struct node *tempNode = d.data[x][y];
-	while(tempNode->next != NULL){
+	while(tempNode != NULL && tempNode->next != NULL){
 		if(tempNode->figCount == figCount){
 			present = 1;
 			break;
@@ -77,6 +78,7 @@ void checkAndAddOverlapData(int x, int y){
 
 // removing the overlap data while erasing out a particular figure
 void removeNodeData(int x, int y){
+	printf("hai2\n");
 	struct node* tempNode = d.data[x][y];
 	if(tempNode->figCount == toRemove){
 		d.data[x][y] = malloc(sizeof(struct node));
@@ -98,6 +100,7 @@ void removeNodeData(int x, int y){
 
 // setting the value in the board, and check for overlapping
 void setPixels(int x, int y, char color){
+	printf("haiasdf\n");
 	if(d.pixels[y-1][x-1] != d.backgroundColor && color != d.backgroundColor){
 		logFig[figCount].isOverlapping = 1;
 		struct node *tempNode = d.data[y-1][x-1];
@@ -159,6 +162,7 @@ void drawKite(int x, int y, int length, char borderColor, char fillColor){
 	rangeStart = rangeEnd = x;
 	do{
 		for(i=rangeStart; i<=rangeEnd; i++){
+			printf("sadf %d %d %d %d %d\n", i, tempy, rangeStart, rangeEnd, indc); fflush(stdout);
 			if(!checkRange(i,tempy)) continue;
 			if(i==rangeStart && i==rangeEnd) setPixels(i, tempy, (borderColor!=bg)?'x':bg);
 			else if((i==rangeStart && indc==1) || (i==rangeEnd && indc==-1)) setPixels(i,tempy, (borderColor!=bg)?'/':bg);
@@ -166,6 +170,7 @@ void drawKite(int x, int y, int length, char borderColor, char fillColor){
 			else setPixels(i,tempy,fillColor);
 		}
 		if(rangeEnd-rangeStart >= 2*length) indc *= -1;
+		printf("%d\n", indc);
 		tempy ++;
 		rangeStart -= indc; rangeEnd += indc;
 	}while(rangeStart != rangeEnd);
@@ -180,7 +185,10 @@ void printBoard(){
 	printf("\n");
 	for(i=0; i<d.height; i++){
 		for(j=0; j<d.width; j++){
-			printf("%c", d.pixels[i][j]);
+			if((i==0 || i==d.height-1 || j==0 || j==d.width-1) && d.overlapCount[i][j]==0){
+				printf("*");
+			}else
+				printf("%c", d.pixels[i][j]);
 		}
 		printf("\n");
 	}printf("\n");
@@ -282,6 +290,7 @@ void printBoardWithBoundary(){
 			else if((i==minx&&j==maxy) || (i==maxx&&j==miny)) printf("+");
 			else if((i==minx || i==maxx)) printf("-");
 			else if(j==miny || j==maxy) printf("|");
+			else if((i==0 || i==d.height-1 || j==0 || j==d.width-1) && d.overlapCount[i][j]==0) printf("*");
 			else printf("%c", d.pixels[i][j]);
 		}
 		printf("\n");
@@ -290,7 +299,8 @@ void printBoardWithBoundary(){
 
 int main(){
 	int x, y, height, width, length;
-	freopen("input3.in", "r", stdin);
+	int type, i, n;
+	//freopen("input3.in", "r", stdin);
 	//freopen("output3.out", "w", stdout);
 	printf("Enter the details of the image\n");
 	printf("Height : ");
@@ -298,18 +308,27 @@ int main(){
 	printf("Width : ");
 	scanf("%d", &d.width);
 	allocatePixels();
-	printf("Enter the left top corner x : ");
-	scanf("%d", &x);
-	printf("Enter the left top corner y : ");
-	scanf("%d", &y);
-	printf("Enter the widht of the rectangle : "); scanf("%d", &width);
-	printf("Enter the height of the rectangle : "); scanf("%d", &height);
-	drawRectangle(x,y,width, height, 'B', 'G');
-	printf("Enter the center x : ");
-	scanf("%d", &x);
-	printf("Enter the center y : ");
-	scanf("%d", &y);
-	printf("Enter the length : "); scanf("%d", &length);
-	drawKite(x,y,length, 'B', ' ');
+	printf("Enter no of figures : ");
+	scanf("%d", &n);
+	for(i=0; i<n; i++){
+		printf("Enter the type of the figure : ");
+		scanf("%d", &type);
+		if(type==1){
+			printf("Enter the left top corner x : ");
+			scanf("%d", &x);
+			printf("Enter the left top corner y : ");
+			scanf("%d", &y);
+			printf("Enter the widht of the rectangle : "); scanf("%d", &width);
+			printf("Enter the height of the rectangle : "); scanf("%d", &height);
+			drawRectangle(x,y,width,height,'B', 'Y');
+		}else if(type==2){
+			printf("Enter the center x : ");
+			scanf("%d", &x);
+			printf("Enter the center y : ");
+			scanf("%d", &y);
+			printf("Enter the length : "); scanf("%d", &length);
+			drawKite(x,y,length, 'B', 'G');
+		}
+	}
 	printBoard();
 }

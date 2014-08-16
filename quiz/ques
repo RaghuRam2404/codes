@@ -1,0 +1,20 @@
+A bishop in a chess board can move in a diagonal direction. Given two positions in the board, find the minimum number of moves to move from one point to another point.
+Sample Input 1: 
+Starting point : 0 0 
+Ending point : 7 7
+
+Sample Output 1: 
+Minimum no of moves : 1
+
+Sample Input 2:
+Starting point : 0 0
+Ending point : 0 1
+
+Sample Output 2:
+No possible moves
+
+
+
+
+
+

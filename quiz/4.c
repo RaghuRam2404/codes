@@ -25,7 +25,7 @@ int figCount = 0, RECT=1, KITE=2, toRemove=-1;
 // initialize
 void allocatePixels(){
 	int i,j;
-	d.backgroundColor = '.';
+	d.backgroundColor = ' ';
 	d.pixels = malloc(d.height*(sizeof(char*)));
 	d.overlapCount = malloc(d.height*sizeof(int*));
 	d.data = malloc(d.height*sizeof(struct node));
@@ -185,12 +185,13 @@ void drawRectangle(int x, int y, int width, int height, char borderColor, char f
 				//y1 = d.pixels[x][j];
 				//y2 = d.pixels[x+width-1][j];
 				x1 = y1 = x2 = y2 = -1;
-				if(checkRange(i,y)) x1 = d.pixels[y-1][i-1];
-				if(checkRange(i,y+height-1)) x2 = d.pixels[y+height-2][i-1];
-				if(checkRange(x,j)) y1 = d.pixels[j-1][x-1];
-				if(checkRange(x+width-1,j)) y2 = d.pixels[j-1][x+width-2];
-
+				if(checkRange(i,y)) x1 = d.pixels[y-1][i-1]-'0';
+				if(checkRange(i,y+height-1)) x2 = d.pixels[y+height-2][i-1]-'0';
+				if(checkRange(x,j)) y1 = d.pixels[j-1][x-1]-'0';
+				if(checkRange(x+width-1,j)) y2 = d.pixels[j-1][x+width-2]-'0';
+				printf("%d %d %d %d\n", x1,x2,y1,y2);
 				if((x1%divisibility==0 && y1%divisibility==0) || (x1%divisibility==0 && y2%divisibility==0) || (x2%divisibility==0 && y1%divisibility==0) || (x2%divisibility==0 && y2%divisibility==0)){
+					printf("PRINT\n");
 					setPixels(i,j,'0'+divisibility);
 				}else
 					setPixels(i,j,fillColor);
@@ -236,6 +237,9 @@ void printBoard(){
 	printf("\n");
 	for(i=0; i<d.height; i++){
 		for(j=0; j<d.width; j++){
+			if((i==0 || i==d.height-1 || j==0 || j==d.width-1) && d.overlapCount[i][j]==0){
+				printf("*");
+			}else
 			printf("%c", d.pixels[i][j]);
 		}
 		printf("\n");
@@ -338,6 +342,9 @@ void printBoardWithBoundary(){
 			else if((i==minx&&j==maxy) || (i==maxx&&j==miny)) printf("+");
 			else if((i==minx || i==maxx)) printf("-");
 			else if(j==miny || j==maxy) printf("|");
+
+			else if((i==0 || i==d.height-1 || j==0 || j==d.width-1) && d.overlapCount[i][j]==0)
+				printf("*");
 			else printf("%c", d.pixels[i][j]);
 		}
 		printf("\n");

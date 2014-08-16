@@ -35,8 +35,9 @@ void allocatePixels(){
 		d.data[i] = malloc(d.width*sizeof(struct node));
 	}
 	for (i=0; i<d.height; i++)
-		for(j=0; j<d.width; j++)
-			d.pixels[i][j] = d.backgroundColor, d.overlapCount[i][j]=0, d.data[i][j] = malloc(sizeof(struct node));
+		for(j=0; j<d.width; j++){
+				d.pixels[i][j] = d.backgroundColor, d.overlapCount[i][j]=0, d.data[i][j] = malloc(sizeof(struct node));
+		}
 }
 
 // adding the log while inserting a new figure into the board
@@ -265,6 +266,9 @@ void printBoardWithBoundary(){
 			else if((i==minx&&j==maxy) || (i==maxx&&j==miny)) printf("+");
 			else if((i==minx || i==maxx) && (j>=miny && j<=maxy)) printf("-");
 			else if((j==miny || j==maxy) && (i>=minx && i<=maxx)) printf("|");
+
+			else if((i==0 || i==d.height-1 || j==0 || j==d.width-1) && d.overlapCount[i][j]==0)
+				printf("*");
 			else printf("%c", d.pixels[i][j]);
 		}
 		printf("\n");
@@ -273,6 +277,7 @@ void printBoardWithBoundary(){
 
 int main(){
 	int x, y, height, width, length;
+	int type, i, n;
 	freopen("input5.in", "r", stdin);
 	//freopen("output5.out", "w", stdout);
 	printf("Enter the details of the image\n");
@@ -281,18 +286,28 @@ int main(){
 	printf("Width : ");
 	scanf("%d", &d.width);
 	allocatePixels();
-	printf("Enter the left top corner x : ");
-	scanf("%d", &x);
-	printf("Enter the left top corner y : ");
-	scanf("%d", &y);
-	printf("Enter the widht of the rectangle : "); scanf("%d", &width);
-	printf("Enter the height of the rectangle : "); scanf("%d", &height);
-	drawRectangle(x,y,width, height, 'B', 'G');
-	printf("Enter the center x : ");
-	scanf("%d", &x);
-	printf("Enter the center y : ");
-	scanf("%d", &y);
-	printf("Enter the length : "); scanf("%d", &length);
-	drawKite(x,y,length, 'B', 'P');
+	printf("Enter no of figures : ");
+	scanf("%d", &n);
+	for(i=0; i<n; i++){
+		printf("Enter the type of the figure : ");
+		scanf("%d", &type);
+		if(type==1){
+			printf("Enter the left top corner x : ");
+			scanf("%d", &x);
+			printf("Enter the left top corner y : ");
+			scanf("%d", &y);
+			printf("Enter the widht of the rectangle : "); scanf("%d", &width);
+			printf("Enter the height of the rectangle : "); scanf("%d", &height);
+			drawRectangle(x,y,width,height,'B', 'Y');
+		}else if(type==2){
+			printf("Enter the center x : ");
+			scanf("%d", &x);
+			printf("Enter the center y : ");
+			scanf("%d", &y);
+			printf("Enter the length : "); scanf("%d", &length);
+			drawKite(x,y,length, 'B', 'G');
+		}
+	}
+	printf("\n");
 	printBoardWithBoundary();
 }

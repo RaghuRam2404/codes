@@ -180,6 +180,9 @@ void printBoard(){
 	printf("\n");
 	for(i=0; i<d.height; i++){
 		for(j=0; j<d.width; j++){
+			 if((i==0 || i==d.height-1 || j==0 || j==d.width-1) && d.overlapCount[i][j]==0)
+				printf("*");
+			else
 			printf("%c", d.pixels[i][j]);
 		}
 		printf("\n");
@@ -267,6 +270,8 @@ void printBoardWithBoundary(){
 			else if((i==minx&&j==maxy) || (i==maxx&&j==miny)) printf("+");
 			else if((i==minx || i==maxx) && (j>=miny && j<=maxy)) printf("-");
 			else if((j==miny || j==maxy) && (i>=minx && i<=maxx)) printf("|");
+			else if((i==0 || i==d.height-1 || j==0 || j==d.width-1) && d.overlapCount[i][j]==0) 
+				printf("*");
 			else printf("%c", d.pixels[i][j]);
 		}
 		printf("\n");
@@ -304,8 +309,10 @@ int main(){
 	printf("Width : ");
 	scanf("%d", &d.width);
 	allocatePixels();
+	printf("Enter no of figures : ");
 	scanf("%d", &n);
 	for(i=0; i<n; i++){
+		printf("Enter the type of the figure : ");
 		scanf("%d", &typ);
 		if(typ == 1){
 			getAndPrintRectangle();
@@ -313,7 +320,7 @@ int main(){
 			getAndPrintKite();
 		}
 	}
-	printBoardWithBoundary();
+	printBoard();
 	printlogFig();
 
 	for(i=0; i<n; i++){
@@ -324,9 +331,10 @@ int main(){
 	printf("No of deletions to be performed on the board : ");
 	scanf("%d", &noOfDeletions);
 	for(i=0; i<noOfDeletions; i++){
+		printf("Enter x and y : ");
 		scanf("%d %d", &x, &y);
 		removeAllFiguresFromAPoint(x,y);
 	}
-	printBoardWithBoundary();;
+	printBoard();;
 
 }
